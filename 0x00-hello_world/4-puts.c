@@ -1,8 +1,12 @@
 #include <stdio.h>
 
 /**
-* the main Enty Point
-*/
+ * main - Entry point
+ * 
+ * Description: 'programme prints character'
+ *   
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle%s");
