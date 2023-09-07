@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <sys/syscall.h>
 
 /**
  * main - Entry point
@@ -10,7 +11,7 @@
 int main(void)
 {
 char print = 'and that piece of art is useful" - Dora Korpar, 2015-10-19\n';
-putchar(print);
+syscall(SYS_write, 1, print, sizeof(print)); 
 return (1);
 }
 
