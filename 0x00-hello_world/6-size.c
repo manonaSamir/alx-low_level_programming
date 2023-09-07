@@ -3,11 +3,10 @@
 /**
  * main - Entry point
  *
- * Description: 'C program that prints the size of various types on the compute'
+ * Description: 'program that prints the size of various types on the compute'
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 printf("Size of a char: %d byte(s)\n", sizeof(char));
