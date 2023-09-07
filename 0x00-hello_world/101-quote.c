@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: 'UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity'
+ * Description: 'Write a C program that prints exactly'
  *
  * Return: Always 0 (Success)
  */
