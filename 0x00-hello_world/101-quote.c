@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <sys/syscall.h>
+
 /**
  * main - Entry point
  *
@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-char print = 'and that piece of art is useful" - Dora Korpar, 2015-10-19\n';
-syscall(SYS_write, 1, print, sizeof(print)); 
+char *print = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+fprintf(stdout, "%s", print);
 return (1);
 }
