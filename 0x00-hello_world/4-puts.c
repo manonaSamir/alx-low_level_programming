@@ -2,9 +2,9 @@
 
 /**
  * main - Entry point
- * 
+ *
  * Description: 'programme prints character'
- *   
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
