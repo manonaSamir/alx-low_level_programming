@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
 * the main Enty Point
 */
 int main(void)
