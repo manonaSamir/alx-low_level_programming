@@ -8,7 +8,8 @@
  * Return: Always 0 (Success)
  */
 
-int main(void) {
+int main(void) 
+{
 int a, b;
 for (int a = 0; a < 99; a++)
 {
