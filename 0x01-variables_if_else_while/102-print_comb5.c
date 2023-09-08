@@ -14,9 +14,9 @@ int a, b, c, d;
 for (a = 0; a < 10; a++)
 {
 b = 0;
-if(a > 0)
+if (a > 0)
 {
-    b = a +1;
+b = a + 1;
 }
 for (; b < 9; b++)
 {
