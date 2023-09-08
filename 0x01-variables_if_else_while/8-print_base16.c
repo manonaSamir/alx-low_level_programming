@@ -12,17 +12,15 @@ int main(void)
 char i;
 for (i = 0; i < 16; i++)
 {
-//printf("%X",i);
-if(i < 10){
-    putchar('0' + i);
+if(i < 10)
+{
+putchar('0' + i);
 }
-else{
- putchar(87 + i);
+else
+{
+putchar(87 + i);
 }
-
-
 }
-
 putchar('\n');
 return (0);
 }
