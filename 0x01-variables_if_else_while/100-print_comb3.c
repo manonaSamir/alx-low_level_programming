@@ -21,7 +21,7 @@ putchar('0' + j);
 if (i < 8)
 {
 putchar(',');
-putchar(32);
+putchar(' ');
 }
 }
 }
