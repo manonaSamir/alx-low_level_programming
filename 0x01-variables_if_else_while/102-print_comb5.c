@@ -30,7 +30,7 @@ putchar('0' + b);
 putchar(' ');
 putchar('0' + c);
 putchar('0' + d);
-if (!(c == 8 && d == 9))
+if (!(c == 8 && d == 9 && b == 9))
 {
 putchar(',');
 putchar(' ');
