@@ -14,7 +14,7 @@ int main(void)
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-switch (n % 10) 
+switch (n % 10)
 {
 case 5:
 printf("%d is greater than 5\n", n);
