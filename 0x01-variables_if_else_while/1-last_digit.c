@@ -24,6 +24,7 @@ printf("%d is 0\n", n);
 break;
 case 6:
 printf("%d is less than 6 and not 0\n", n);
+break;
 }
 return (0);
 }
