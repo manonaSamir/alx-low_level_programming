@@ -2,7 +2,13 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - variables_if_else_while
+ *
+ * Description: '0-positive_or_negative'
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 int n;
