@@ -8,37 +8,21 @@
  * Return: Always 0 (Success)
  */
 
-int main(void)
+int main(void) {
+int a, b;
+for (int a = 0; a < 99; a++) {
+for (int b = a; b <= 99; b++) 
 {
-int a, b, c, d;
-for (a = 0; a < 10; a++)
-{
-b = 0;
-if (a > 0)
-{
-b = a + 1;
-}
-for (; b < 9; b++)
-{
-for (c = 0; c < 10; c++)
-{
-d = c + 1;
-for (; d < 10; d++)
-{
-putchar('0' + a);
-putchar('0' + b);
+putchar('0' + a / 10);
+putchar('0' + a % 10);
 putchar(' ');
-putchar('0' + c);
-putchar('0' + d);
-if (!(c == 8 && d == 9 && b == 9))
-{
+putchar('0' + b / 10);
+putchar('0' + b % 10);
+if (a != 98 || b != 99) {
 putchar(',');
 putchar(' ');
 }
 }
 }
-}
-}
-putchar('\n');
-return (0);
+return 0;
 }
