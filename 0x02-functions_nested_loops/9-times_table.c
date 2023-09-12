@@ -15,7 +15,7 @@ for (j = 0; j <= 9; j++)
 div = i * j;
 if (div < 10)
 {
-if (!(i == 0))
+if (!(i == 0 || j == 0))
 {
 _putchar(' ');
 }
