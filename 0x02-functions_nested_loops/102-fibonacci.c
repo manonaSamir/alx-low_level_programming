@@ -7,18 +7,22 @@
  */
 int main(void)
 {
-long int i, last = 0;
+long int i, last = 0, first = 1, second;
+second = first + 1;
 for (i = 1; i <= 50; i++)
 {
-if (i + last < 50)
-{
-printf("%ld", i + last);
-if ((i + last) != 49)
+printf("%ld", first);
+if (i != 50)
 {
 printf(", ");
 }
-last = i;
+else
+{
+printf("\n");
 }
+last = first + second;
+first = second;
+second = last;
 }
 return (0);
 }
