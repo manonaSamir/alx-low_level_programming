@@ -4,7 +4,7 @@
 /**
  * print_to_98 - prints all natural numbers from n to 98,
  * @n: print from this number
- * Return : 
+ * Return : loop of number
  */
 
 int print_to_98(int n)
