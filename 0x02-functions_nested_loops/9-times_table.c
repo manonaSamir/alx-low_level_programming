@@ -15,7 +15,10 @@ for (j = 0; j <= 9; j++)
 div = i * j;
 if (div < 10)
 {
+if(div != 0)
+{
 _putchar(' ');
+}
 _putchar('0' + div);
 }
 else
