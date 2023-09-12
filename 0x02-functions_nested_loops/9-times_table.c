@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer - print every minute of the day, starting from 00:00 - 23:59.
+ * times_table - prints the 9 times table, starting with 0.
  * Return: void
  */
 
