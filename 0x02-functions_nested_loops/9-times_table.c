@@ -31,8 +31,8 @@ if (div < 10)
 {
 _putchar(' ');
 }
-_putchar(',');
 _putchar(' ');
+_putchar(',');
 }
 }
 _putchar('\n');
