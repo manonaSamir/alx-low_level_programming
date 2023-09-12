@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * 8-24_hours - Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
- * @n: value use to find the absolute value.
- * Return: prints every minute of the day of Jack Bauer
+ * 8-24_hours - Write a function that prints every minute of the day, starting from 00:00 to 23:59.
+ * Return: void
  */
 
 void jack_bauer(void)
