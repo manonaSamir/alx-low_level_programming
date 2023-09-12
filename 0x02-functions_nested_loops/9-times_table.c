@@ -15,15 +15,15 @@ for (j = 0; j <= 9; j++)
 div = i * j;
 if (div < 10)
 {
-putchar('0' + div);
+_putchar('0' + div);
 }
 else
 {
 if (div / 10)
 {
-putchar(div / 10 + '0');
+_putchar(div / 10 + '0');
 }
-putchar(div % 10 + '0');
+_putchar(div % 10 + '0');
 }
 if (j != 9)
 {
