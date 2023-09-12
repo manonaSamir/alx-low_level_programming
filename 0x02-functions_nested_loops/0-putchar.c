@@ -11,10 +11,9 @@
 
 int main(void)
 {
-char *word = "_putchar ";
+char *word = "_putchar";
 int i;
-int len = strlen(word);
-for (i = 0; i <= len; i++)
+for (i = 0; i <= 8; i++)
 {
 _putchar(word[i]);
 }
