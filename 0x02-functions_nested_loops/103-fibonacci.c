@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-    int i;
-    long j = 1, k = j + 1, sum, total;
-    for (i = 0; total < 4000000; i++)
-    {
-        total = j + k;
-        if (k % 2 == 0)
-        {
-            sum += total;
-        }
-        j = k;
-        k = total;
-    }
-    printf("%ld\n", sum);
-    return (0);
+int i;
+long j = 1, k = j + 1, sum, total;
+for (i = 0; total < 4000000; i++)
+{
+total = j + k;
+if (k % 2 == 0)
+{
+    sum += total;
+}
+j = k;
+k = total;
+}
+printf("%ld\n", sum);
+return (0);
 }
