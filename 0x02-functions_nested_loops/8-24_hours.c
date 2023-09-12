@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_last_digit - Write a function that prints the last digit of a number.
+ * 8-24_hours - Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
  * @n: value use to find the absolute value.
- * Return: the value of the last digit
+ * Return: prints every minute of the day of Jack Bauer
  */
 
 void jack_bauer(void)
