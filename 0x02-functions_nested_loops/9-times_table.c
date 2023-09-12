@@ -15,6 +15,7 @@ for (j = 0; j <= 9; j++)
 div = i * j;
 if (div < 10)
 {
+_putchar(' ');
 _putchar('0' + div);
 }
 else
@@ -27,12 +28,8 @@ _putchar(div % 10 + '0');
 }
 if (j != 9)
 {
-if (div < 10)
-{
-_putchar(' ');
-}
-_putchar(' ');
 _putchar(',');
+_putchar(' ');
 }
 }
 _putchar('\n');
