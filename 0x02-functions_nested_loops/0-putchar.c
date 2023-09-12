@@ -1,5 +1,4 @@
 
-#include <stdio.h>
 #include "main.h"
 #include <string.h>
 /**
@@ -19,7 +18,6 @@ for (i = 0; i <= len; i++)
 {
 _putchar(word[i]);
 }
-putchar('\n');
+_putchar('\n');
 return (0);
 }
-
