@@ -19,12 +19,10 @@ putchar('0' + div);
 }
 else
 {
-// Remove the last digit and recur
 if (div/10)
 {
-putchar(div/10+ '0');
+putchar(div/10 + '0');
 }
-// Print the last digit
 putchar(div%10 + '0');
 }
 if(j != 9)
