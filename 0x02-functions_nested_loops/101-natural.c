@@ -16,5 +16,6 @@ sum += i;
 }
 }
 printf("%lu\n", sum);
+printf("\n");
 return (0);
 }
