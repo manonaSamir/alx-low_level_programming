@@ -19,6 +19,6 @@ sum += total;
 j = k;
 k = total;
 }
-printf("%ld\n", sum);
+printf("%ld\n", sum +2);
 return (0);
 }
