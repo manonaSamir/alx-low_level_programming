@@ -8,7 +8,7 @@
 int main(void)
 {
 int i;
-long j = 1, k = j + 1, sum =0, total=0;
+long j = 1, k = j + 1, sum = 0, total = 0;
 for (i = 0; total < 4000000; i++)
 {
 total = j + k;
