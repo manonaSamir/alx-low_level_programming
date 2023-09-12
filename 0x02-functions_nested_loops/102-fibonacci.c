@@ -10,7 +10,7 @@ int main(void)
 long int i, last = 0;
 for (i = 1; i <= 50; i++)
 {
-if ( i + last < 50)
+if (i + last < 50)
 {
 printf("%ld", i + last);
 if ((i + last) != 49)
