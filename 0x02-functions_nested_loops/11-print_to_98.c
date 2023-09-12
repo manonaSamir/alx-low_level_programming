@@ -4,10 +4,9 @@
 /**
  * print_to_98 - prints all natural numbers from n to 98,
  * @n: print from this number
- * Return : loop of number
  */
 
-int print_to_98(int n)
+void print_to_98(int n)
 {
 int i;
 if (n == 98)
