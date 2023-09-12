@@ -1,10 +1,7 @@
 
 #include "main.h"
 /**
- * main - variables_if_else_while
- *
- * Description: '1-alphabet.c'
- *
+ * 1-alphabet.c
  * Return: Always 0 (Success)
  */
 
