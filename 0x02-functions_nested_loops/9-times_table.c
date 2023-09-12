@@ -25,7 +25,7 @@ putchar(div / 10 + '0');
 }
 putchar(div % 10 + '0');
 }
-if(j != 9)
+if (j != 9)
 {
 _putchar(' ,');
 }
