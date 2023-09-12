@@ -25,8 +25,8 @@ large_tail = b % 1000000000;
 for (; count < 99; count++)
 {
 overflow = (small_tail + large_tail) / 1000000000;
-sum_tail = (small_tail + large_tail) - (1000000000 * overflow);
-sum_head = (small_head + large_head) + overflow;
+sum_tail = (small_tail + large_tail) -(1000000000 * overflow);
+sum_head = (small_head + large_head) +overflow;
 printf(", %lu%lu", sum_head, sum_tail);
 small_head = large_head;
 small_tail = large_tail;
