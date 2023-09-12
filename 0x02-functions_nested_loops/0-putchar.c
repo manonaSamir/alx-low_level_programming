@@ -13,7 +13,8 @@ int main(void)
 {
 char *word = "_putchar";
 int i;
-for (i = 0; i <= strlen(word); i++)
+int len = strlen(word);
+for (i = 0; i <= len; i++)
 {
 _putchar(word[i]);
 }
