@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha - Write a function that checks for alphabetic character.
+ * _isalpha - check if the given character is lower case.
  * @c: character to test.
  *
  * return 0 if not c
