@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 /**
  * main - variables_if_else_while
  *
