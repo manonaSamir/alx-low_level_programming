@@ -27,6 +27,10 @@ _putchar(div % 10 + '0');
 }
 if (j != 9)
 {
+if(div < 10)
+{
+_putchar(' ');
+}
 _putchar(',');
 _putchar(' ');
 }
