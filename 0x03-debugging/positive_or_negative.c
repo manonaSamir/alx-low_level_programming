@@ -10,7 +10,7 @@
  *
  * Return: Always 0 (Success)
  */
-int positive_or_negative(n)
+int positive_or_negative(int n)
 {
 srand(time(0));
 n = rand() - RAND_MAX / 2;
