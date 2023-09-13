@@ -10,9 +10,8 @@
  *
  * Return: Always 0 (Success)
  */
-int positive_or_negative(void)
+int positive_or_negative(n)
 {
-int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 if (n > 0)
