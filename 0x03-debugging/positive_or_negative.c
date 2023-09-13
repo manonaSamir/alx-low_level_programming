@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
 /* more headers goes there */
 
 /**
@@ -12,7 +11,6 @@
  */
 int positive_or_negative(int n)
 {
-srand(time(0));
 if (n > 0)
 {
 printf("%d is positive\n", n);
