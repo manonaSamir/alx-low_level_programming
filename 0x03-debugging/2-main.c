@@ -1,4 +1,3 @@
-#include "2-largest_number.c"
 #include <stdio.h>
 /**
 * main - prints the largest of 3 integers
