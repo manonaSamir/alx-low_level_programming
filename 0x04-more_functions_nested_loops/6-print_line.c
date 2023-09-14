@@ -7,10 +7,11 @@
  */
 void print_line(int n)
 {
-int i;
+int i, c;
 for (i = 0; i <= n; i++)
 {
-_putchar('0' + ('-' * n));
+c = '-' * n;
+_putchar(c);
 _putchar('\n');
 }
 }
