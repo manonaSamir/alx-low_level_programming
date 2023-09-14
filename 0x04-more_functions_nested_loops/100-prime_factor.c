@@ -20,7 +20,7 @@ for (i = 3; i <= sqrt(n); i = i + 2)
 {
 while (n % i == 0)
 {
-printf("%d ", i);
+printf("%ld ", i);
 n = n / i;
 }
 }
