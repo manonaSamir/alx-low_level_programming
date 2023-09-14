@@ -7,7 +7,7 @@
  * Return:  0
  */
 
-void main(void)
+int main(void)
 {
 long int n = 612852475143;
 int i;
