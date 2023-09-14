@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main -  program that prints the numbers from 1 to 100.
+ * main - program that prints the numbers from 1 to 100.
  *  Always 0 (Success)
  */
 int main(void)
