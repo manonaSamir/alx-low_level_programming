@@ -9,7 +9,8 @@
 
 int main(void)
 {
-long long int n = 612852475143;
+long int n = 612852475143;
+long result;
 int i;
 while (n % 2 == 0)
 {
@@ -25,6 +26,7 @@ n = n / i;
 }
 }
 if (n > 2)
-printf("%lld", n);
+result = n;
+printf("%lld", result);
 return (0);
 }
