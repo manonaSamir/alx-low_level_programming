@@ -9,7 +9,7 @@
 
 int main(void)
 {
-long int n = 612852475143;
+long long int n = 612852475143;
 long result = 0;
 int i;
 while (n % 2 == 0)
@@ -21,7 +21,6 @@ for (i = 3; i <= sqrt(n); i = i + 2)
 {
 while (n % i == 0)
 {
-printf("%d", i);
 n = n / i;
 }
 }
