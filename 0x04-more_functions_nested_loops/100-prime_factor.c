@@ -20,11 +20,11 @@ for (i = 3; i <= sqrt(n); i = i + 2)
 {
 while (n % i == 0)
 {
-printf("%ld ", i);
+printf("%ld", i);
 n = n / i;
 }
 }
 if (n > 2)
-printf("%d ", n);
+printf("%ld", n);
 return (0);
 }
