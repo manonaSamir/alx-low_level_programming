@@ -29,6 +29,7 @@ if (n > 2)
 {
 result = n;
 printf("%ld", result);
+putchar('\n');
 }
 return (0);
 }
