@@ -26,7 +26,9 @@ n = n / i;
 }
 }
 if (n > 2)
+{
 result = n;
-printf("%lld", result);
+printf("%ld", result);
+}
 return (0);
 }
