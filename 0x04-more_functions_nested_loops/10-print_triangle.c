@@ -10,13 +10,13 @@ size = 10;
 int i, j, k;
 if (size <= 0)
 {
-_putchar('\n');
+putchar('\n');
 }
 else
 {
 for (i = 0; i < size; i++)
 {
-for (j = i + 1; j <= size; j++)
+for (j = i + 1; j < size; j++)
 {
 _putchar(' ');
 }
