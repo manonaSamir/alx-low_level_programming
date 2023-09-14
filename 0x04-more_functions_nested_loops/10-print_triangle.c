@@ -4,7 +4,7 @@
  * @size: the number of times the character _ should be printed
  * Return: 0
  */
-void main(int size)
+void print_triangle(int size)
 {
 size = 10;
 int i, j, k;
