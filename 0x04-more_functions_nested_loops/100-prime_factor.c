@@ -25,6 +25,6 @@ n = n / i;
 }
 }
 if (n > 2)
-printf("%ld", n);
+printf("%lld", n);
 return (0);
 }
