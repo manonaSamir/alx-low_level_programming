@@ -7,7 +7,7 @@
  * Return:  0
  */
 
-void primeFactors(void)
+void main(void)
 {
 long int n = 612852475143;
 int i;
