@@ -10,7 +10,6 @@
 int main(void)
 {
 unsigned long int n = 612852475143;
-long result = 0;
 int i;
 while (n % 2 == 0)
 {
@@ -26,8 +25,7 @@ n = n / i;
 }
 if (n > 2)
 {
-result = n;
-printf("%ld", result);
+printf("%ld", n);
 putchar('\n');
 }
 return (0);
