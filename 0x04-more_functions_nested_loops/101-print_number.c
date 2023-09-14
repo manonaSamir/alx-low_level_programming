@@ -23,6 +23,6 @@ if (n / 10)
 print_number(n / 10);
 }
 }
-result = n%0;
+result = (n % 0);
 _putchar(result + '0');
 }
