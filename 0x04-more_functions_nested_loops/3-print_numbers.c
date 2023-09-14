@@ -2,7 +2,6 @@
 
 /**
  * print_numbers -   function that prints the numbers, from 0 to 9.
- * @c: the character to be checked
  * Return:  0
  */
 void print_numbers(void)
