@@ -1,4 +1,4 @@
-#include<stdio.h> 
+#include <stdio.h>
 
 /**
  * primeFactors -   finds and prints the largest prime factor of the number 612852475143
@@ -8,20 +8,20 @@
 void primeFactors(void)
 {
 long int n = 612852475143;
-while (n%2 == 0)
+while (n % 2 == 0)
 {
 printf("%d ", 2);
-n = n/2;
+n = n / 2;
 }
-for (int i = 3; i <= sqrt(n); i = i+2) 
+for (int i = 3; i <= sqrt(n); i = i + 2)
 {
-while (n%i == 0) 
+while (n % i == 0)
 {
 printf("%d ", i);
-n = n/i;
+n = n / i;
 }
 }
 if (n > 2)
-printf ("%d ", n);
+printf("%d ", n);
 return (0);
 }
