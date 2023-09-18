@@ -8,7 +8,7 @@
 
 void rev_string(char *s)
 {
-int temp, i = _strlen(s)-1, j = 0;
+int temp, i = _strlen(s) - 1, j = 0;
 for (; i >= j; --i)
 {
 temp = s[j];
