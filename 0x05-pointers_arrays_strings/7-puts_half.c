@@ -12,7 +12,7 @@ int len;
 if (_strlen(str) % 2 == 0)
 {
 len = _strlen(str) / 2;
-for (i = len + 1; i < _strlen(str); i++)
+for (i = len; i < _strlen(str); i++)
 {
 _putchar(str[i]);
 }
