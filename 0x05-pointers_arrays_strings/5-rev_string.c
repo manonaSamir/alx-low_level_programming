@@ -20,5 +20,5 @@ for (; i >= 0; --i)
 s[j] = temp[i];
 j++;
 }
-_putchar(s[i]);
+_putchar(s);
 }
