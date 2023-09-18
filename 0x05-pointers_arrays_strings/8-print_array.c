@@ -17,7 +17,7 @@ printf(", %d", a[i]);
 }
 else
 {
-printf("%d", a[i]);
+printf(" %d", a[i]);
 }
 }
 _putchar('\n');
