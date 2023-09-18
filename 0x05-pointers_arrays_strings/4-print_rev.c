@@ -8,9 +8,9 @@
 
 void print_rev(char *s)
 {
-char temp[10];
 int k, j = 0;
 int i = strlen(s);
+char temp[i];
 for (k = 0; k <= i; k++)
 {
 temp[k] = s[k];
