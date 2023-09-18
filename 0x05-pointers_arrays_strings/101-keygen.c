@@ -14,7 +14,7 @@ char array[63] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 char password[100];
 srand(time(NULL));
 int sum = 0, i;
-for (i =0; sum < (2772 - 122); i++)
+for (i = 0; sum < (2772 - 122); i++)
 {
 r = rand() % 62;
 password[i] = array[r];
