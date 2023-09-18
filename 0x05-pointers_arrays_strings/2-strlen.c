@@ -13,5 +13,5 @@ for (i = 0; s[i] != '\0'; i++)
 {
 count = i;
 }
-return (i);
+return (count);
 }
