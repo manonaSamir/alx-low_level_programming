@@ -14,6 +14,6 @@ for (; i >= 0; --i)
 {
 c += s[i];
 }
-_putchar(c + '0');
+_putchar(c);
 _putchar('\n');
 }
