@@ -10,19 +10,15 @@
 
 int main(void)
 {
-char array[63] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-char password[100];
-srand(time(NULL));
-int i, r, sum = 0;
-for (i = 0; sum < (2772 - 122); i++)
+int i, random, checksum;
+checksum = 2772;
+for (i = 0; checksum > 100; i++)
 {
-r = rand() % 62;
-password[i] = array[r];
-sum = sum + password[i];
+random = (rand() % 100);
+printf("%c", random);
+checksum -= random;
 i++;
 }
-r = 2772 - sum;
-password[i] = r;
-printf("%c", password);
+printf("%c", checksum);
 return (0);
 }
