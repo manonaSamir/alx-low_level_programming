@@ -13,7 +13,7 @@ int i, minus, boolean;
 long result;
 result = boolean = 0;
 minus = -1;
-for (i = 0; i < strlen(s); i++)
+for (i = 0; i < _strlen(s); i++)
 {
 if (s[i] == '-')
 minus *= -1;
