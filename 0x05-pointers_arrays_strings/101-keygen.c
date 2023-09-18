@@ -11,6 +11,7 @@
 int main(void)
 {
 int i, random, checksum;
+srand(time(NULL));
 checksum = 2772;
 for (i = 0; checksum > 100; i++)
 {
