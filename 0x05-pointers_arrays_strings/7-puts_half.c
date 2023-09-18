@@ -19,7 +19,7 @@ _putchar(str[i]);
 }
 else
 {
-len = (strlen(str) - 1) / 2;
+len = (_strlen(str) - 1) / 2;
 for (i = len + 1; i < _strlen(str); i++)
 {
 _putchar(str[i]);
