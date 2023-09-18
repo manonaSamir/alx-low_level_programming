@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 /**
  * _strlen - function that returns the length of a string.
  * @s: pointer to first value
@@ -15,3 +15,4 @@ count = i;
 }
 return (i);
 }
+
