@@ -9,8 +9,7 @@
 
 int _atoi(char *s)
 {
-int i, minus, boolean;
-long result;
+int i, minus, boolean, result;
 result = boolean = 0;
 minus = -1;
 for (i = 0; i < _strlen(s); i++)
