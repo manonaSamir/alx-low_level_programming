@@ -12,7 +12,7 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-unsigned int i, j = 0;
+long unsigned int i, j = 0;
 for (i = strlen(dest); j < n && j <= strlen(src); i++)
 {
 dest[i] = src[j];
