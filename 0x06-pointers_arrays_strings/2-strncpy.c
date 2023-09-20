@@ -13,6 +13,7 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 unsigned int i, j = 0;
+int k = strlen(src);
 for (i = strlen(dest); j < n && j <= k; i++)
 {
 dest[i] = src[j];
