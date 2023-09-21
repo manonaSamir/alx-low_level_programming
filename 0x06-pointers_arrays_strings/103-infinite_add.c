@@ -48,7 +48,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		s1--;
 		index++;
-		if (size_r == index && (s1 != n1 - 1 ||  carry == 1))
+		if (size_r == index && (s1 != n1 - 1 || carry == 1))
 			return (0);
 	}
 	while (s2 != n2 - 1)
