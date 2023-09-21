@@ -23,7 +23,11 @@ for (j = 0; j < sepLen; j++)
 {
 if (sep[j] == m[i])
 {
+if (m[i + 1] >= 'a' && m[i + 1] <= 'z' && m[i + 1] != '\0')
+{
 m[i + 1] = m[i + 1] - diff;
+continue;
+}
 }
 }
 }
