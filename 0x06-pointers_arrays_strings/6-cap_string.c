@@ -1,6 +1,5 @@
 #include <string.h>
 #include <stdio.h>
-#include <ctype.h>
 
 
 /**
@@ -17,7 +16,7 @@ char sep[] = { ' ', '\t', '\n', ',', ';', '!',
 int diff = 'a' - 'A', i = 0, j, len = strlen(m), sepLen = strlen(sep);
 for (; i <= len; i++)
 {
-if (!(isalpha(m[i]) || isdigit(m[i])) && m[i] != '\0')
+if (!(m[i] >= 'a' && m[i] <= 'z') && m[i] != '\0')
 {
 for (j = 0; j <= sepLen; j++)
 {
