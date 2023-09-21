@@ -12,7 +12,6 @@
  * Return: the summed string in r. If r is too small for the result,
  * return 0;
  */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int carry = 0, index = 0, index2;
