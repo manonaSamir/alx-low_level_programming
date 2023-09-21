@@ -16,13 +16,13 @@ char sep[] = { ' ', '\t', '\n', ',', ';', '!',
 int diff = 'a' - 'A', i = 0, j, len = strlen(m), sepLen = strlen(sep);
 for (; i <= len; i++)
 {
-if (!(isalpha(m[i]) || isdigit(m[i])))
+if (!(isalpha(m[i]) || isdigit(m[i])) && m[i] != '\0')
 {
 for (j = 0; j <= sepLen; j++)
 {
 if (sep[j] == m[i])
 {
-if (m[i + 1] != '\0' && m[i + 1] >= 'a' && m[i + 1] <= 'z')
+if (m[i + 1] >= 'a' && m[i + 1] <= 'z')
 {
 m[i + 1] = m[i + 1] - diff;
 continue;
