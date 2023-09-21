@@ -11,7 +11,7 @@
 
 char *leet(char *m)
 {
-char sep[2][5] = {{'a', 'e', 'o', 't', 'l'}, {'4', '3', '0', '7', '1'}};
+int sep[][] = {{'a', 'e', 'o', 't', 'l'}, {'4', '3', '0', '7', '1'}};
 int i, sepLen = strlen(m);
 for (i = 0; i <= sepLen; i++)
 {
