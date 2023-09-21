@@ -10,7 +10,7 @@
  */
 char *rot13(char *m)
 {
-char sep[][5] = {{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz},
+char sep[][52] = {{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz},
 {NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm}};
 int i, sepLen = strlen(m), j;
 for (i = 0; i <= sepLen; i++)
