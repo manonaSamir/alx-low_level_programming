@@ -15,7 +15,7 @@ for (; i >= len; i--)
 {
 if (i != len)
 {
-s[i] = s[i] - diff;
+m[i] = m[i] - diff;
 }
 }
 return (m);
