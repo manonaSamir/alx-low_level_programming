@@ -18,7 +18,7 @@ for (; i < len; i++)
 {
 if (!(m[i] >= 'a' && m[i] <= 'z') && m[i] != '\0')
 {
-for (j = 0; j <= sepLen; j++)
+for (j = 0; j < sepLen; j++)
 {
 if (sep[j] == m[i])
 {
