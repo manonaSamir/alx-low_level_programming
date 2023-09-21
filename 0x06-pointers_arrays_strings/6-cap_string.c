@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
-#include "main.h"
+
 
 /**
  * cap_string - capitalizes all words of a string.
@@ -32,7 +32,7 @@ break;
 }
 else
 {
-break;
+continue;
 }
 }
 return (m);
