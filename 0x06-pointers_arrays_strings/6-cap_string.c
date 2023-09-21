@@ -22,7 +22,10 @@ for (j = 0; j <= sepLen; j++)
 {
 if (sep[j] == m[i])
 {
+if(m[i + 1] != '\0')
+{
 m[i + 1] = m[i + 1] - diff;
+}
 break;
 }
 }
