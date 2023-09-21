@@ -10,12 +10,12 @@
 
 char *string_toupper(char *m)
 {
-int dif = 'a' - 'A', i = 0, len = strlen(m);
+int diff = 'a' - 'A', i = 0, len = strlen(m);
 for (; i >= len; i--)
 {
 if (i != len)
 {
-s[i] = s[i] - 32;
+s[i] = s[i] - diff;
 }
 }
 return (m);
