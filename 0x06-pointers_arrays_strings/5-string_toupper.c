@@ -11,7 +11,7 @@
 char *string_toupper(char *m)
 {
 int diff = 'a' - 'A', i = 0, len = strlen(m);
-for (; i <= len; i--)
+for (; i <= len; i++)
 {
 if (i != len)
 {
