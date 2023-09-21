@@ -26,32 +26,38 @@ while (i <= l1 || i <= l2)
 {
 num1 = num2 = 0;
 if (i <= l1)
-		num1 = n1[l1 - i] - '0';
-	if (i <= l2 && (l2 - i) >= 0)
-		num2 = n2[l2 - i] - '0';
-	sum = num1 + num2 + carry;
-	if (sum >= 10)
-	{
-		carry = 1;
-		sum -= 10;
-	}
-	else
-		carry = 0;
-	r[i] = sum + '0';
-	i++;
-	rl++;
+{
+num1 = n1[l1 - i] - '0';
+}
+if (i <= l2 && (l2 - i) >= 0)
+{
+num2 = n2[l2 - i] - '0';
+}
+sum = num1 + num2 + carry;
+if (sum >= 10)
+{
+carry = 1;
+sum -= 10;
+}
+else
+{
+carry = 0;
+}
+r[i] = sum + '0';
+i++;
+rl++;
 }
 if (carry > 0)
 {
-	r[i] = carry + '0';
-	r[i + 1] = '\0';
+r[i] = carry + '0';
+r[i + 1] = '\0';
 }
 i = tmpl = 0;
 while (i <= rl)
 {
-	tmp[i] = r[rl - i];
-	tmpl++;
-	i++;
+tmp[i] = r[rl - i];
+tmpl++;
+i++;
 }
 i = 0;
 while (i < tmpl)
