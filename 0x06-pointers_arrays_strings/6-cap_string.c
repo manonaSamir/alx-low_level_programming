@@ -27,10 +27,6 @@ break;
 }
 }
 }
-else
-{
-continue;
-}
 }
 return (m);
 }
