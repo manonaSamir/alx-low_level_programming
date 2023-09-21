@@ -1,7 +1,6 @@
 #include <string.h>
 #include <stdio.h>
 
-
 /**
 * cap_string - This function capitalizes all words of a string.
 * @m: sring to be processed.
