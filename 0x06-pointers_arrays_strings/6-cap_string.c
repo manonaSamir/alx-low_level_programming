@@ -4,10 +4,11 @@
 
 
 /**
- * cap_string - capitalizes all words of a string.
- * @m: array to convert upper
- * Return: the resulting string
- */
+* cap_string - This function capitalizes all words of a string.
+* @m: sring to be processed.
+* Return: pointer to the modified string.
+*/
+
 
 char *cap_string(char *m)
 {
