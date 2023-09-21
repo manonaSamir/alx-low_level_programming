@@ -14,9 +14,7 @@ char *cap_string(char *m)
 char sep[] = { ' ', '\t', '\n', ',', ';', '!',
 '.', '?', '\"', '(', ')', '{', '}'};
 int diff = 'a' - 'A', i = 0, j, len = strlen(m), sepLen = strlen(sep);
-for (; i <= len; i++)
-{
-if (m[i + 1] >= 'a' && m[i + 1] <= 'z')
+for (; i < len; i++)
 {
 if (!(isalpha(m[i]) || isdigit(m[i])))
 {
@@ -26,7 +24,6 @@ if (sep[j] == m[i])
 {
 m[i + 1] = m[i + 1] - diff;
 break;
-}
 }
 }
 }
