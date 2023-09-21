@@ -11,7 +11,7 @@
 
 char *cap_string(char *m)
 {
-char sep[] = { ' ', '\t', '\n', ',', ';', '!',
+char sep[] = {' ', '\t', '\n', ',', ';', '!',
 '.', '?', '\"', '(', ')', '{', '}'};
 int diff = 'a' - 'A', i = 0, j, len = strlen(m), sepLen = strlen(sep);
 for (; i < len; i++)
