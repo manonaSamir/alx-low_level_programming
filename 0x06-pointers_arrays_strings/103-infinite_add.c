@@ -55,34 +55,26 @@ if (size_r == index && (s1 != n1 - 1 || carry == 1))
 	return (0);
 }
 while (s2 != n2 - 1)
-{
-r[index] = *s2 + carry;
-carry = 0;
-if (r[index] > '9')
-{
-carry = 1;
-r[index] -= 10;
-}
-s2--;
-index++;
-if (size_r == index && (s2 != n2 - 1 || carry == 1))
-	return (0);
-}
+	r[index] = *s2 + carry;
+	carry = 0;
+	if (r[index] > '9')
+		carry = 1;
+		r[index] -= 10;
+	s2--;
+	index++;
+	if (size_r == index && (s2 != n2 - 1 || carry == 1))
+		return (0);
 if (carry == 1)
-{
-r[index] = '1';
-r[index + 1] = 0;
-}
+	r[index] = '1';
+	r[index + 1] = 0;
 else
 	r[index--] = 0;
 index2 = 0;
 while (index2 <= index)
-{
-carry = r[index];
-r[index] = r[index2];
-r[index2] = carry;
-index--;
-index2++;
-}
+	carry = r[index];
+	r[index] = r[index2];
+	r[index2] = carry;
+	index--;
+	index2++;
 return (r);
 }
