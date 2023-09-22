@@ -1,4 +1,5 @@
-#include <string.h>
+#include "main.h"
+#include <stdio.h>
 
 /**
  * infinite_add - adds two integers stored as strings
@@ -13,30 +14,37 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int len1 = strlen(n1);
-int len2 = strlen(n2);
-int lenR = len1 > len2 ? len1 : len2;
-int carry = 0, i;
-if (lenR + 1 > size_r)
-{
-return (0);
-}
-for (i = 0; i < lenR; i++)
-{
-int digit1 = i < len1 ? n1[len1 - 1 - i] - '0' : 0;
-int digit2 = i < len2 ? n2[len2 - 1 - i] - '0' : 0;
-int sum = digit1 + digit2 + carry;
-r[lenR - i] = sum % 10 + '0';
-carry = sum / 10;
-}
-if (carry > 0)
-{
-if (lenR + 2 > size_r)
-{
-return (0);
-}
-memmove(r + 1, r, lenR + 1);
-r[0] = carry + '0';
-}
-return (r);
+	int nm1, nm2, res, i, carry, sum;
+
+	for (nm1 = 0; n1[nm1]; nm1++)
+		;
+	for (nm2 = 0; n2[nm2]; nm2++)
+		;
+	if (nm1 > size_r || nm2 > size_r)
+		return (0);
+	carry = 0;
+	for (nm1 -= 1, nm2 -= 1, res = 0; res < size_r - 1; nm1--, nm2--, res++)
+	{
+		sum = carry;
+		if (nm1 >= 0)
+			sum += n1[nm1] - '0';
+		if (nm2 >= 0)
+			sum += n2[nm2] - '0';
+		if (nm1 < 0 && nm2 < 0 && sum == 0)
+		{
+			break;
+		}
+		carry = sum / 10;
+		r[res] = sum % 10 + '0';
+	}
+	r[res] = '\0';
+	if (nm1 >= 0 || nm2 >= 0 || carry)
+		return (0);
+	for (res -= 1, i = 0; i < res; res--, i++)
+	{
+		carry = r[res];
+		r[res] = r[i];
+		r[i] = carry;
+	}
+	return (r);
 }
