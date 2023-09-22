@@ -28,6 +28,7 @@ for ( ; *s2 != 0; s2++)
 }
 r[size_r] = 0;
 for (; s2 != n2 - 1 && s1 != n1 - 1; index++)
+{
 	s2--;
 	s1--;
 	r[index] = *s2 - '0' + *s1 + carry;
@@ -37,7 +38,9 @@ for (; s2 != n2 - 1 && s1 != n1 - 1; index++)
 		r[index] -= 10;
 	if (size_r == index && (s1 != n1 - 1 || s2 != n2 - 1 || carry == 1))
 		return (0);
+}
 for (; s1 != n1 - 1; index++)
+{
 	s1--;
 	r[index] = *s1 + carry;
 	carry = 0;
@@ -46,6 +49,7 @@ for (; s1 != n1 - 1; index++)
 		r[index] -= 10;
 	if (size_r == index && (s1 != n1 - 1 || carry == 1))
 		return (0);
+}
 for (; s2 != n2 - 1; index++)
 	s2--;
 	r[index] = *s2 + carry;
