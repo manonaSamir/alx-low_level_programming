@@ -34,8 +34,10 @@ for (; s2 != n2 - 1 && s1 != n1 - 1; index++)
 	r[index] = *s2 - '0' + *s1 + carry;
 	carry = 0;
 	if (r[index] > '9')
-		carry++;
-		r[index] -= 10;
+		{
+			carry++;
+			r[index] -= 10;
+		}
 	if (size_r == index && (s1 != n1 - 1 || s2 != n2 - 1 || carry == 1))
 		return (0);
 }
