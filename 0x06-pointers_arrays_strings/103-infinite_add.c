@@ -14,36 +14,36 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int n1, n2, result, i, carry, sum;
+	int nm1, nm2, res, i, carry, sum;
 
-	for (n1 = 0; n1[n1]; n1++)
+	for (nm1 = 0; n1[nm1]; nm1++)
 		;
-	for (n2 = 0; n2[n2]; n2++)
+	for (nm2 = 0; n2[nm2]; nm2++)
 		;
-	if (n1 > size_r || n2 > size_r)
+	if (nm1 > size_r || nm2 > size_r)
 		return (0);
 	carry = 0;
-	for (n1 -= 1, n2 -= 1, result = 0; result < size_r - 1; n1--, n2--, result++)
+	for (nm1 -= 1, nm2 -= 1, res = 0; res < size_r - 1; nm1--, nm2--, res++)
 	{
 		sum = carry;
-		if (n1 >= 0)
-			sum += n1[n1] - '0';
-		if (n2 >= 0)
-			sum += n2[n2] - '0';
-		if (n1 < 0 && n2 < 0 && sum == 0)
+		if (nm1 >= 0)
+			sum += n1[nm1] - '0';
+		if (nm2 >= 0)
+			sum += n2[nm2] - '0';
+		if (nm1 < 0 && nm2 < 0 && sum == 0)
 		{
 			break;
 		}
 		carry = sum / 10;
-		r[result] = sum % 10 + '0';
+		r[res] = sum % 10 + '0';
 	}
-	r[result] = '\0';
-	if (n1 >= 0 || n2 >= 0 || carry)
+	r[res] = '\0';
+	if (nm1 >= 0 || nm2 >= 0 || carry)
 		return (0);
-	for (result -= 1, i = 0; i < result; result--, i++)
+	for (res -= 1, i = 0; i < res; res--, i++)
 	{
-		carry = r[result];
-		r[result] = r[i];
+		carry = r[res];
+		r[res] = r[i];
 		r[i] = carry;
 	}
 	return (r);
