@@ -2,6 +2,20 @@
 #include <stdio.h>
 
 /**
+ * add_digits - Helper function to add two digits and carry.
+ *
+ * @digit1: First digit to add.
+ * @digit2: Second digit to add.
+ * @carry: Pointer to carry value.
+ * @result: Pointer to store the result digit.
+ */
+void add_digits(char digit1, char digit2, int *carry, char *result) {
+    int sum = (digit1 - '0') + (digit2 - '0') + *carry;
+    *carry = sum / 10;
+    *result = (sum % 10) + '0';
+}
+
+/**
  * infinite_add - adds two integers stored as strings
  *
  * @n1: first integer string to add
@@ -11,75 +25,75 @@
  * Return: the summed string in r. If r is too small for the result,
  * return 0;
  */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
-{
-int carry = 0, index = 0, index2;
-char *s1 = n1, *s2 = n2;
+char *infinite_add(char *n1, char *n2, char *r, int size_r) {
+    int carry = 0;
+    int index = 0;
+    char *s1 = n1, *s2 = n2;
 
-for ( ; *s1 != 0;)
-{
-s1++;
-}
-for ( ; *s2 != 0; s2++)
-{
-	s1--;
-	s2--;
-	size_r--;
-}
-r[size_r] = 0;
-for (; s2 != n2 - 1 && s1 != n1 - 1; index++)
-{
-	s2--;
-	s1--;
-	r[index] = *s2 - '0' + *s1 + carry;
-	carry = 0;
-	if (r[index] > '9')
-		{
-			carry++;
-			r[index] -= 10;
-		}
-	if (size_r == index && (s1 != n1 - 1 || s2 != n2 - 1 || carry == 1))
-		return (0);
-}
-for (; s1 != n1 - 1; index++)
-{
-	s1--;
-	r[index] = *s1 + carry;
-	carry = 0;
-	if (r[index] > '9')
-		{
-			carry = 1;
-			r[index] -= 10;
-		}
-	if (size_r == index && (s1 != n1 - 1 || carry == 1))
-		return (0);
-}
-for (; s2 != n2 - 1; index++)
-{
-	s2--;
-	r[index] = *s2 + carry;
-	carry = 0;
-	if (r[index] > '9')
-		{
-		carry = 1;
-		r[index] -= 10;
-		}
-	if (size_r == index && (s2 != n2 - 1 || carry == 1))
-		return (0);
-}
-if (carry == 1)
-{
-	r[index] = '1';
-	r[index + 1] = 0;
-}
-else
-	r[index--] = 0;
-for (index2 = 0; index2 <= index; index--)
-{
-	index2++;
-	carry = r[index];
-	r[index] = r[index2];
-	r[index2] = carry;
-}
-return (r);
+    // Find the end of both input strings
+    while (*s1 != '\0') {
+        s1++;
+    }
+    while (*s2 != '\0') {
+        s2++;
+    }
+
+    // Subtract one from the pointers to start from the last digit
+    s1--;
+    s2--;
+
+    // Perform addition
+    while (s1 >= n1 && s2 >= n2) {
+        if (index >= size_r) {
+            return 0; // Result array is too small
+        }
+        add_digits(*s1, *s2, &carry, &r[index]);
+        s1--;
+        s2--;
+        index++;
+    }
+
+    // Continue adding the remaining digits from n1
+    while (s1 >= n1) {
+        if (index >= size_r) {
+            return 0; // Result array is too small
+        }
+        add_digits(*s1, '0', &carry, &r[index]);
+        s1--;
+        index++;
+    }
+
+    // Continue adding the remaining digits from n2
+    while (s2 >= n2) {
+        if (index >= size_r) {
+            return 0; // Result array is too small
+        }
+        add_digits(*s2, '0', &carry, &r[index]);
+        s2--;
+        index++;
+    }
+
+    // Handle any remaining carry
+    while (carry > 0) {
+        if (index >= size_r) {
+            return 0; // Result array is too small
+        }
+        r[index] = carry % 10 + '0';
+        carry /= 10;
+        index++;
+    }
+
+    r[index] = '\0'; // Null-terminate the result string
+
+    // Reverse the result string
+    int start = 0, end = index - 1;
+    while (start < end) {
+        char temp = r[start];
+        r[start] = r[end];
+        r[end] = temp;
+        start++;
+        end--;
+    }
+
+    return r;
 }
