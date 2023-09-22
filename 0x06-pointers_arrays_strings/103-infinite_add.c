@@ -47,12 +47,15 @@ for (; s1 != n1 - 1; index++)
 	r[index] = *s1 + carry;
 	carry = 0;
 	if (r[index] > '9')
-		carry = 1;
-		r[index] -= 10;
+		{
+			carry = 1;
+			r[index] -= 10;
+		}
 	if (size_r == index && (s1 != n1 - 1 || carry == 1))
 		return (0);
 }
 for (; s2 != n2 - 1; index++)
+{
 	s2--;
 	r[index] = *s2 + carry;
 	carry = 0;
@@ -61,15 +64,20 @@ for (; s2 != n2 - 1; index++)
 		r[index] -= 10;
 	if (size_r == index && (s2 != n2 - 1 || carry == 1))
 		return (0);
+}
 if (carry == 1)
+{
 	r[index] = '1';
 	r[index + 1] = 0;
+}
 else
 	r[index--] = 0;
 for (index2 = 0; index2 <= index; index--)
+{
 	index2++;
 	carry = r[index];
 	r[index] = r[index2];
 	r[index2] = carry;
+}
 return (r);
 }
