@@ -20,8 +20,8 @@ if (lenR + 1 > size_r)
 {
 return (0);
 }
-int carry = 0;
-for (int i = 0; i < lenR; i++)
+int carry = 0, i;
+for (i = 0; i < lenR; i++)
 {
 int digit1 = i < len1 ? n1[len1 - 1 - i] - '0' : 0;
 int digit2 = i < len2 ? n2[len2 - 1 - i] - '0' : 0;
