@@ -14,17 +14,10 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-<<<<<<< HEAD
-	int carry = 0, index = 0, index2;
-	char *s1 = n1, *s2 = n2;
-	while (*s1 != 0)
-	{	
-=======
 int carry = 0, index = 0, index2;
 char *s1 = n1, *s2 = n2;
 
 while (*s1 != 0)
->>>>>>> 4c3790f0977c1004a243623f0b93c0a90d8bc32d
 	s1++;
 while (*s2 != 0)
 	s2++;
