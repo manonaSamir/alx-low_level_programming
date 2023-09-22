@@ -14,10 +14,10 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 int carry = 0, index = 0, index2;
-char *s1, *s2;
+char *s1 = n1, *s2 = n2;
 
-for (*s1 = n1; *s1 != 0; s1++)
-for (*s2 = n2; *s2 != 0; s2++)
+for ( ; *s1 != 0; s1++)
+for ( ; *s2 != 0; s2++)
 	s1--;
 	s2--;
 	size_r--;
