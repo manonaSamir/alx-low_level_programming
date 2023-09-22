@@ -17,7 +17,7 @@ int carry = 0, index = 0, index2;
 char *s1 = n1, *s2 = n2;
 
 for (; *s1 != 0; s1++)
-for (; *s2 != 0; s2++; s1--; s2--; size_r--)
+for (; *s2 != 0; s2++) s1--; s2--; size_r--
 r[size_r] = 0;
 for (; s2 != n2 - 1 && s1 != n1 - 1; index++; s2--; s1--)
 	r[index] = *s2 - '0' + *s1 + carry;
