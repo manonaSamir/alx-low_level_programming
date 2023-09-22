@@ -2,22 +2,6 @@
 #include <stdio.h>
 
 /**
- * add_digits - Helper function to add two digits and carry.
- *
- * @digit1: First digit to add.
- * @digit2: Second digit to add.
- * @carry: Pointer to carry value.
- * @result: Pointer to store the result digit.
- */
-void add_digits(char digit1, char digit2, int *carry, char *result)
-{
-	int sum = (digit1 - '0') + (digit2 - '0') + *carry;
-
-	*carry = sum / 10;
-	*result = (sum % 10) + '0';
-}
-
-/**
  * infinite_add - adds two integers stored as strings
  *
  * @n1: first integer string to add
@@ -27,71 +11,40 @@ void add_digits(char digit1, char digit2, int *carry, char *result)
  * Return: the summed string in r. If r is too small for the result,
  * return 0;
  */
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int carry = 0, index = 0;
-	char *s1 = n1, *s2 = n2;
-	while (*s1 != '\0')
-	{
-		s1++;
-	}
-	while (*s2 != '\0')
-	{
-		s2++;
-	}
-	s1--;
-	s2--;
-	while (s1 >= n1 && s2 >= n2)
-	{
-		if (index >= size_r)
-		{
-			return (0);
-		}
-		add_digits(*s1, *s2, &carry, &r[index]);
-		s1--;
-		s2--;
-		index++;
-	}
-	while (s1 >= n1)
-	{
-		if (index >= size_r)
-		{
-			return (0);
-		}
-		add_digits(*s1, '0', &carry, &r[index]);
-		s1--;
-		index++;
-	}
-	while (s2 >= n2)
-	{
-		if (index >= size_r)
-		{
-			return (0);
-		}
-		add_digits(*s2, '0', &carry, &r[index]);
-		s2--;
-		index++;
-	}
+	int n1, n2, result, i, carry, sum;
 
-	while (carry > 0)
+	for (n1 = 0; n1[n1]; n1++)
+		;
+	for (n2 = 0; n2[n2]; n2++)
+		;
+	if (n1 > size_r || n2 > size_r)
+		return (0);
+	carry = 0;
+	for (n1 -= 1, n2 -= 1, result = 0; result < size_r - 1; n1--, n2--, result++)
 	{
-		if (index >= size_r)
+		sum = carry;
+		if (n1 >= 0)
+			sum += n1[n1] - '0';
+		if (n2 >= 0)
+			sum += n2[n2] - '0';
+		if (n1 < 0 && n2 < 0 && sum == 0)
 		{
-			return (0);
+			break;
 		}
-		r[index] = carry % 10 + '0';
-		carry /= 10;
-		index++;
+		carry = sum / 10;
+		r[result] = sum % 10 + '0';
 	}
-	r[index] = '\0';
-	int start = 0, end = index - 1;
-	while (start < end)
+	r[result] = '\0';
+	if (n1 >= 0 || n2 >= 0 || carry)
+		return (0);
+	for (result -= 1, i = 0; i < result; result--, i++)
 	{
-		char temp = r[start];
-		r[start] = r[end];
-		r[end] = temp;
-		start++;
-		end--;
+		carry = r[result];
+		r[result] = r[i];
+		r[i] = carry;
 	}
 	return (r);
 }
