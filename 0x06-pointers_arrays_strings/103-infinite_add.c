@@ -17,7 +17,9 @@ int len1 = strlen(n1);
 int len2 = strlen(n2);
 int lenR = len1 > len2 ? len1 : len2;
 if (lenR + 1 > size_r)
-    return (0);
+{
+return (0);
+}
 int carry = 0;
 for (int i = 0; i < lenR; i++)
 {
@@ -30,7 +32,9 @@ carry = sum / 10;
 if (carry > 0)
 {
 if (lenR + 2 > size_r)
-    return (0);
+{
+return (0);
+}
 memmove(r + 1, r, lenR + 1);
 r[0] = carry + '0';
 }
