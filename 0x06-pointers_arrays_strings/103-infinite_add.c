@@ -12,6 +12,7 @@
 void add_digits(char digit1, char digit2, int *carry, char *result)
 {
 	int sum = (digit1 - '0') + (digit2 - '0') + *carry;
+
 	*carry = sum / 10;
 	*result = (sum % 10) + '0';
 }
@@ -28,8 +29,7 @@ void add_digits(char digit1, char digit2, int *carry, char *result)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int carry = 0;
-	int index = 0;
+	int carry = 0, index = 0;
 	char *s1 = n1, *s2 = n2;
 	while (*s1 != '\0')
 	{
