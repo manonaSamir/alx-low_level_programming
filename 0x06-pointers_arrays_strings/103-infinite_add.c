@@ -31,8 +31,8 @@ if (carry > 0)
 {
 if (lenR + 2 > size_r)
     return (0);
-memmove(r + 1, r, lenR + 1); // shift right by one position
-r[0] = carry + '0'; // store the carry
+memmove(r + 1, r, lenR + 1);
+r[0] = carry + '0';
 }
 return (r);
 }
