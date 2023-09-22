@@ -60,8 +60,10 @@ for (; s2 != n2 - 1; index++)
 	r[index] = *s2 + carry;
 	carry = 0;
 	if (r[index] > '9')
+		{
 		carry = 1;
 		r[index] -= 10;
+		}
 	if (size_r == index && (s2 != n2 - 1 || carry == 1))
 		return (0);
 }
