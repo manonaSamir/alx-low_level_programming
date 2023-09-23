@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    char s[] = "";
+    char s[] = " ";
     char *p;
 
     p = rot13(s);
