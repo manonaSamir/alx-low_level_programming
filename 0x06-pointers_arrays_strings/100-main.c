@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    char s[] = " ";
+    char s[] = "rot13('Talk is cheap. Show me the code ([#CisFun, #CisAwesome])\n')";
     char *p;
 
     p = rot13(s);

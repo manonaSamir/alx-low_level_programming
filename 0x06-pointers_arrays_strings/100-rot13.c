@@ -16,7 +16,13 @@ while (j < 13 && ((str[i] >= 'a' && str[i] <= 'z')
 || (str[i] >= 'A' && str[i] <= 'Z')))
 {
 if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
+{
 str[i] += 13;
+}
+else
+{
+str[i] -= 13;
+}
 j++;
 }
 i++;
