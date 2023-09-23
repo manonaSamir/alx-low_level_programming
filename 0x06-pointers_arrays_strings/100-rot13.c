@@ -1,35 +1,24 @@
-#include "main.h"
-#include <string.h>
-#include <stdio.h>
-#include <ctype.h>
 
+#include <stdio.h>
 /**
- * rot13 - encodes a string in rot13
- * @m: string to be encoded
- * Return: the resulting string
- */
-char *rot13(char *m)
+* rot13 - function yo rotate a string
+* @str: string we want to rotate
+* Return: pointer to the converted string */
+char *rot13 (char *str)
 {
-char sep[2][52] = {
-{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
-'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
-'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'},
-{'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B',
-'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b',
-'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'}};
-int i, sepLen = strlen(m), j;
-for (i = 0; i < sepLen && m[i] != '\0'; i++)
+int i = 0, j;
+while (str[i])
 {
-for (j = 0; j < 52; j++)
+j = 0;
+while (j < 13 && ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')))
 {
-if (sep[0][j] == m[i])
-{
-m[i] = sep[1][j];
-break;
+if ((str[i] >= 'a' && str[i] <= 'm')|| (str[i] >= 'A' && str[i] <= 'M'))
+    str[i] += 13;
+else
+    str[i]-=13;
+j++;
 }
+i++;
 }
-}
-return (m);
+return (str);
 }
