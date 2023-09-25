@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _memset - this funtion fills memory with a constant byte.
@@ -8,6 +8,7 @@
  *
  * Return: A pointer to memory area s.
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 int i;
