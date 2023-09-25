@@ -11,19 +11,19 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-unsigned int i, j, m;
-char word [];
+unsigned int i, j = 0;
 for (i = 0; haystack[i] != '\0'; i++)
 {
-if (haystack[i] == needle[i])
+if (haystack[i] == needle[j])
 {
-for (j = i, m = 0; haystack[j] != '\0'; j++, m++)
-{
-word [m] = haystack[j];
+j++;
 if (needle[j] != '\0')
 {
-return (word);
+return ((haystack + i - j + 1));
 }
+else if (j < 1)
+{
+return (haystack);
 }
 }
 }
