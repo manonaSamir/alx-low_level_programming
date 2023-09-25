@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - check the code
@@ -11,7 +12,7 @@ int main(void)
     char *s = "hello";
     char *f;
 
-    f = _strchr(s, ' ');
+    f = strchr(s, '\0');
 
     if (f != NULL)
     {
