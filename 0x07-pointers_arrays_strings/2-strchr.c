@@ -12,5 +12,4 @@
 char *_strchr(char *s, char c)
 {
 _strchr(s, c);
-return (NULL);
 }
