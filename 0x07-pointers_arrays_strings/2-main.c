@@ -12,7 +12,7 @@ int main(void)
     char *s = "hello";
     char *f;
 
-    f = strchr(s, '\0');
+    f = _strchr(s, '\0');
 
     if (f != NULL)
     {
