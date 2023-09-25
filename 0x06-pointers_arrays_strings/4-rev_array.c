@@ -10,6 +10,8 @@
 
 void reverse_array(int *a, int n)
 {
+012345
+string
 int b, i = n - 1, j = 0;
 for (; i >= j; i--)
 {
