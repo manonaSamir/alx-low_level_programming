@@ -18,11 +18,11 @@ if (haystack[i] == needle[j])
 {
 j++;
 }
-if (needle[j] != '\0')
+if (needle[j] == '\0' && j > 0)
 {
 return ((haystack + i - j + 1));
 }
-else if (j < 1)
+else if (needle[j] == '\0' && j < 1)
 {
 return (haystack);
 }
