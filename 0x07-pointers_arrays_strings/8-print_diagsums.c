@@ -2,20 +2,22 @@
 #include <stdio.h>
 
 /**
- * print_chessboard - prints a chestboard out and it's pieaces from a matrix;
- * @a: matrix of the board and pieces current location.
- *
+ * print_diagsums - prints the sum of the two diagonals
+ * of a square matrix of integers.
+ * @a: bad idea.
+ * @size: the size of the the array.
  * Return: Nothing
  */
 
-void print_chessboard(char (*a)[8])
+
+void print_diagsums(int *a, int size);
 {
 int sum0 = 0, sum1 = 0;
 int row, col;
-for (col = 0, row = 0; row < 8 ; row++, col++)
+for (col = 0, row = 0; row < size ; row++, col++)
 {
-sum0 += *(a + row  * 8 + col);
-sum1 += *(a + row  * 8 + (8 - 1 - col));
+sum0 += *(a + row  * size + col);
+sum1 += *(a + row  * size + (size - 1 - col));
 }
 printf("%d, %d\n", sum0, sum1);
 }
