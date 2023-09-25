@@ -17,14 +17,14 @@ for (i = 0; haystack[i] != '\0'; i++)
 if (haystack[i] == needle[j])
 {
 j++;
+}
 if (needle[j] != '\0')
 {
 return ((haystack + i - j + 1));
 }
-else if (j < 1)
+if (j < 1)
 {
 return (haystack);
-}
 }
 }
 return (NULL);
