@@ -22,7 +22,7 @@ if (needle[j] != '\0')
 {
 return ((haystack + i - j + 1));
 }
-if (j < 1)
+else if (j < 1)
 {
 return (haystack);
 }
