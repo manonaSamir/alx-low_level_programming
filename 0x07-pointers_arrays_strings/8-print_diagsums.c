@@ -10,7 +10,7 @@
  */
 
 
-void print_diagsums(int *a, int size);
+void print_diagsums(int *a, int size)
 {
 int sum0 = 0, sum1 = 0;
 int row, col;
