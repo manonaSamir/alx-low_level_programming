@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
+
 /**
  * _strspn - function  calculates  the  length (in bytes) of the initial
  * segment of s which consists entirely of bytes in accept.
@@ -10,19 +11,28 @@
  * Return: the number (U_INT) of bytes matching accept.
  */
 
-
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int i, j;
-for (i = 0; i < strlen(accept); i++)
+unsigned int i, j, count = 0, foundBreak = 0;
+
+for (i = 0; s[i] != '\0'; i++)
 {
-for (j = 0; j < strlen(s); j++)
+if (s[i] == ' ')
 {
-if (accept[i] == s[j])
+foundBreak = 1;
+}
+for (j = 0; accept[j] != '\0'; j++)
 {
-return (j + 1);
+if (s[i] == accept[j])
+{
+count ++;
+break;
 }
 }
+if (foundBreak > 0)
+{
+return (count);
 }
-return (0);
+}
+return (count);
 }
