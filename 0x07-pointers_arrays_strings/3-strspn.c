@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <string.h>
 /**
  * _strspn - function  calculates  the  length (in bytes) of the initial
  * segment of s which consists entirely of bytes in accept.
@@ -13,14 +13,14 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-int i, j;
-for (i = 0; i < strlen(s); i++)
+unsigned int i, j;
+for (i = 0; i < strlen(accept); i++)
 {
-for (j = 0; j < strlen(accept); j++)
+for (j = 0; j < strlen(s); j++)
 {
-if (s[i] == accept[j])
+if (accept[i] == s[j])
 {
-return (i);
+return (j + 1);
 }
 }
 }
