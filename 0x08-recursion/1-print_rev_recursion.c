@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * _puts_recursion - prints a string follow by a new line. recursively.
- * @s: string in which to print.
+ * _print_rev_recursion - function that prints a string in reverse.
+ * @s: string to print in reverse.
  *
  * Return: Nothing
  */
