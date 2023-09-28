@@ -2,13 +2,6 @@
 #include <stdio.h>
 
 /**
- * _sqrt_recursion - find the square root of a given number.
- * @n: number to find the square root of.
- *
- * Return: the sqrt as a Int.
- */
-
-/**
  * Set_sqrt_recursion - find the square root of a given number.
  * @n: number to find the square root of.
  * @i:number of loop
@@ -26,6 +19,12 @@ if (i * i == n)
 return (i);
 return (Set_sqrt_recursion(n, i + 1));
 }
+
+/**
+ * _sqrt_recursion - find the square root of a given number.
+ * @n: number to find the square root of.
+ * Return: the sqrt as a Int.
+ */
 
 int _sqrt_recursion(int n)
 {
