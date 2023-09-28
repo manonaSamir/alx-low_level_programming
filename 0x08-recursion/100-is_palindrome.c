@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <string.h>
 /**
  * palindrome - checks the characters recursively for palindrome
  * @s: string to check
@@ -10,15 +10,16 @@
  * Return: 1 if palindrome, 0 if not
  */
 
-int palindrome(int s, int x, int y)
+int palindrome(char *s, int x, int y)
 {
-if (x != 0)
+if (x > y)
 {
-y = (y * 10) + (x % 10);
-x = x / 10;
-return (palindrome(s, x, y));
+if (s[y] == s[x])
+{
+return (palindrome(s, --x, ++y));
 }
-if (y == s)
+return (0);
+}
 return (1);
 }
 
@@ -31,7 +32,8 @@ return (1);
 
 int is_palindrome(char *s)
 {
+int len = strlen(s) - 1;
 if (*s == 1)
 return (1);
-return (palindrome(s, s, 0));
+return (palindrome(s, len, 0));
 }
