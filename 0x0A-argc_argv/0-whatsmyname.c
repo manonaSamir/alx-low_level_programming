@@ -3,13 +3,13 @@
 /**
  * main - Entry point.
  * @argc: size of argv
- * @argv: name of app + any other arguments.
+ * @argv: name of app arguments.
  * Return: Alway 0 (sucess)
  */
 
 int main(int argc, char *argv[])
 {
-printf("%s", argv[0]);
+printf("%s\n", argv[0]);
 (void)argc;
 return (0);
 }
