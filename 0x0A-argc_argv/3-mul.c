@@ -17,7 +17,7 @@ printf("Error\n");
 return (1);
 }
 for (i = 1; i < argc; i++)
-sum *= (int)*argv[i];
+sum *= (int)(argv[i]);
 printf("%d\n", sum);
 return (0);
 }
