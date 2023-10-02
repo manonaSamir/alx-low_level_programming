@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * main - multiplies two numbers
  * @argc: counts the arguments.
