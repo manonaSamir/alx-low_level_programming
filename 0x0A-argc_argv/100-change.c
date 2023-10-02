@@ -27,8 +27,10 @@ return (0);
 }
 for (i = 0; i < 5 && num >= 0; i++)
 {
-for (j = 0; num >= coins[i]; j++, num -= coins[i])
-;
+for (j = 0; num >= coins[i]; j++)
+{
+num -= coins[i];
+}
 }
 printf("%d\n", j);
 return (0);
