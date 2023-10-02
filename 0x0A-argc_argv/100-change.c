@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-int num, i, j;
+int num, i, j = 0;
 int coins[] = {25, 10, 5, 2, 1};
 if (argc != 2)
 {
@@ -27,7 +27,7 @@ return (0);
 }
 for (i = 0; i < 5 && num >= 0; i++)
 {
-for (j = 0; num >= coins[i]; j++)
+for (j = j; num >= coins[i]; j++)
 {
 num -= coins[i];
 }
