@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * _strspn - function  calculates  the  length (in bytes) of the initial
