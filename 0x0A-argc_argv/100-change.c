@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-int num = atoi(argv[1]), i, j;
+int num, i, j = 0;
 int coins[] = {25, 10, 5, 2, 1};
 if (argc != 2)
 {
@@ -24,7 +24,7 @@ if (num < 0)
 printf("0\n");
 return (0);
 }
-j = 0;
+num = atoi(argv[1])
 for (i = 0; i < 5 && num >= 0; i++)
 {
 while (num >= coins[i])
