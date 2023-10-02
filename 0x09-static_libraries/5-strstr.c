@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _strstr - function that locates a substring.
  * @haystack: source string to search through.
@@ -25,5 +25,5 @@ else if (needle[j] == '\0' && j < 1)
 return (haystack);
 }
 }
-return (NULL);
+return (0);
 }
