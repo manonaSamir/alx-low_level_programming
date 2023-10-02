@@ -24,7 +24,7 @@ if (num < 0)
 printf("0\n");
 return (0);
 }
-for (i = 0; i <= len && num > 0; i++)
+for (i = 0; i < len && num >= 0; i++)
 {
 while (num >= coins[i])
 {
