@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 int coins[] = {25, 10, 5, 2, 1};
-int num = atoi(argv[1]), i, j = 0, len = sizeof(coins[i]);
+int num = atoi(argv[1]), i, j = 0;
 if (argc != 2)
 {
 printf("Error\n");
