@@ -1,5 +1,6 @@
-#include "2-strlen.c"
 #include "main.h"
+#include "2-strlen.c"
+
 
 /**
  * *_strncat - concatenates two strings
