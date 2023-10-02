@@ -24,7 +24,7 @@ if (num < 0)
 printf("0\n");
 return (0);
 }
-num = atoi(argv[1])
+num = atoi(argv[1]);
 for (i = 0; i < 5 && num >= 0; i++)
 {
 while (num >= coins[i])
