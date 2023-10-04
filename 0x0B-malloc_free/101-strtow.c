@@ -73,11 +73,11 @@ if (words[b] == 0)
 free_everything(words, b);
 return (NULL);
 }
-for(; *found_word != ' ' && *found_word != '\0';)
+while (*found_word != ' ' && *found_word != '\0')
 {
+words[b][c] = *found_word;
 found_word++;
 c++;
-words[b][c] = *found_word;
 }
 words[b][c] = '\0';
 b++;
