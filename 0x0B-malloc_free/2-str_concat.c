@@ -30,6 +30,6 @@ else
 str[c] = s2[c - a];
 c++;
 }
-free(str);
+str[c] = 0;
 return (str);
 }
