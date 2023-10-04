@@ -2,16 +2,6 @@
 #include <stdio.h>
 
 /**
- * str_concat - this function concatenates two strings.
- * @s1: string 1/2 to concat.
- * @s2: string 2/2 to concat.
- *
- * Return: Pointer to concatenated string.
- */
-#include <stdlib.h>
-#include "main.h"
-
-/**
  * *str_concat - concatenates two strings
  * @s1: string to concatenate
  * @s2: other string to concatenate
