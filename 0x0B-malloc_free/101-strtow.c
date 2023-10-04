@@ -10,20 +10,19 @@
 
 int number(char *str)
 {
-    int a, num = 0;
-
-    for (a = 0; str[a] != '\0'; a++)
-    {
-        if (*str == ' ')
-            str++;
-        else
-        {
-            for (; str[a] != ' ' && str[a] != '\0'; a++)
-                str++;
-            num++;
-        }
-    }
-    return (num);
+int a, num = 0;
+for (a = 0; str[a] != '\0'; a++)
+{
+if (*str == ' ')
+str++;
+else
+{
+for (; str[a] != ' ' && str[a] != '\0'; a++)
+str++;
+num++;
+}
+}
+return (num);
 }
 
 /**
@@ -34,9 +33,9 @@ int number(char *str)
 
 void free_everything(char **string, int i)
 {
-    for (; i > 0;)
-        free(string[--i]);
-    free(string);
+for (; i > 0;)
+free(string[--i]);
+free(string);
 }
 
 /**
