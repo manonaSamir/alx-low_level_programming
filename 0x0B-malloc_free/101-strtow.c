@@ -17,9 +17,7 @@ if (*str == ' ')
 str++;
 else
 {
-for (; str[a] != ' ' && str[a] != '\0'; a++)
-str++;
-num++;
+for (; str[a] != ' ' && str[a] != '\0'; a++, str++, num++);
 }
 }
 return (num);
