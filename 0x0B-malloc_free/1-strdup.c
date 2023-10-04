@@ -13,7 +13,7 @@ int i;
 char *s;
 if (str == 0)
 return (0);
-if (str == NULL)
+if (str == NULL || str == "")
 return (NULL);
 for (i = 0; str[i]; i++)
 s = malloc(sizeof(char) * (i + 1));
