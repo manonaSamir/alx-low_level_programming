@@ -18,7 +18,7 @@ if (s3 == NULL)
 return (NULL);
 if (s1 && s2)
 {
-for(i = 0, j = 0; i < (len1 + len2); i++)
+for (i = 0, j = 0; i < (len1 + len2); i++)
 {
 if (i < len1)
 {
@@ -30,6 +30,10 @@ s3[i] = s2[j];
 j++;
 }
 }
+}
+else
+{
+return (0);
 }
 s3[i] = '\0';
 return (s3);
