@@ -33,7 +33,7 @@ j++;
 }
 else
 {
-return (0);
+return (NULL);
 }
 s3[i] = '\0';
 return (s3);
