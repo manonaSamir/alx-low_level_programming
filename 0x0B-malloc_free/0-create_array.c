@@ -16,11 +16,9 @@ return (0);
 x = malloc(size);
 if (x == 0)
 return (0);
-i = 0;
-while (i < size)
+for (i = 0; i < size; i++)
 {
 x[i] = c;
-i++;
 }
 return (x);
 }
