@@ -24,7 +24,7 @@ len2 = strlen(s2);
 s3 = malloc(sizeof(char) * (len1 + len2 + 1));
 if (s3 == NULL)
 return (NULL);
-if (s1)
+if (s1 || s2)
 {
 for (i = 0, j = 0; i < (len1 + len2); i++)
 {
