@@ -13,7 +13,7 @@ char *ptr, *ret;
 if (!str)
 return (NULL);
 ptr = str;
-ret = malloc(sizeof(str) + 1);
+ret = malloc(sizeof(*str) * strlen(str) + 1);
 if (!ret)
 return (NULL);
 ptr = ret;
