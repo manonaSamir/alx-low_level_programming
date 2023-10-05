@@ -1,6 +1,6 @@
 #include <stdlib.h>
-/* #include <stdio.h> */
-
+#include <stdio.h>
+#include <string.h>
 /**
  * _strdup - function that returns a pointer to a newly allocated string.
  * @str: string to allocate memory for.
@@ -10,11 +10,10 @@
 char *_strdup(char *str)
 {
 char *ptr, *ret;
-int len = strlen(str);
 if (!str)
 return (NULL);
 ptr = str;
-ret = malloc(sizeof(*str) * len + 1);
+ret = malloc(sizeof(*str) * strlen(str) + 1);
 if (!ret)
 return (NULL);
 ptr = ret;
