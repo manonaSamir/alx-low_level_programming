@@ -16,7 +16,7 @@ unsigned int i = 0, j = 0, len1 = strlen(s1), len2 = strlen(s2);
 s3 = malloc(sizeof(char) * (len1 + len2 + 1));
 if (s3 == NULL)
 return (NULL);
-if (s1 && s2)
+if (s1)
 {
 for (i = 0, j = 0; i < (len1 + len2); i++)
 {
