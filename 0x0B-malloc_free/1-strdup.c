@@ -18,5 +18,6 @@ return (NULL);
 ptr = ret;
 while (*str)
 *ptr++ = *str++;
+*ptr = 0;
 return (ret);
 }
