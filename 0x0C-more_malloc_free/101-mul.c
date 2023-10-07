@@ -7,7 +7,8 @@
 
 void multiply(char num1[], char num2[], char result[])
 {
-int len1 = strlen(num1), len2 = strlen(num2), i, j, digit1, digit2, carry = 0, temp, index =0;
+int len1 = strlen(num1), len2 = strlen(num2);
+int i, j, digit1, digit2, carry = 0, temp, index = 0;
 int product[MAX_DIGITS] = {0};
 for (i = len1 - 1; i >= 0; i--)
 {
@@ -56,5 +57,5 @@ return (98);
 }
 multiply(argv[1], argv[2], result);
 printf("Result: %s\n", result);
-return 0;
+return (0);
 }
