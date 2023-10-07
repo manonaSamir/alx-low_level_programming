@@ -66,6 +66,11 @@ sum /= 10;
 if (sum > 0)
 result_str[len1 + len2 + 1] += sum;
 }
+for (i = 0; i < len - 1; i++)
+{
+if (result_str[i])
+putchar(result_str[i] + '0');
+}
 putchar('\n');
 free(result_str);
 return (0);
