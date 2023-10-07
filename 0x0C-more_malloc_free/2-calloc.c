@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _calloc - create and array using calloc
@@ -12,7 +13,6 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 void *ptr;
-unsigned int i;
 if (!nmemb || !size)
 return (NULL);
 ptr = malloc(nmemb * size);
