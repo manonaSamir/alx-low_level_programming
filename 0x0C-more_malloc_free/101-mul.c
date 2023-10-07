@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <stdint.h>
+
 
 /**
  * main - multiplies two positive numbers
@@ -14,8 +14,8 @@
 
 int main(int argc, char *argv[])
 {
-unsigned long num1, num2, result_str;
-int j, i;
+int num1, num2, len, len1, len2, *result_str;
+int j, i, digit1, digit2, sum;
 if (argc != 3)
 {
 printf("Error\n");
@@ -32,9 +32,29 @@ return (98);
 }
 }
 }
-num1 = strtoull(argv[1], NULL, 10);
-num2 = strtoull(argv[2], NULL, 10);
-result_str = num1 * num2;
-printf("Result: %lu\n", result_str);
+len1 = strlen(argv[1]);
+len2 = strlen(argv[2]);
+len = len1 + len2 + 1;
+	result_str = malloc(sizeof(int) * len);
+	if (!result_str)
+		return (1);
+	for (i = 0; i <= len1 + len2; i++)
+		result_str[i] = 0;
+	for (len1 = len1 - 1; len1 >= 0; len1--)
+	{
+		digit1 = argv[1][len1] - '0';
+		sum = 0;
+		for (len2 = strlen(argv[2]) - 1; len2 >= 0; len2--)
+		{
+			digit2 = argv[2][len2] - '0';
+			sum += result_str[len1 + len2 + 1] + (digit1 * digit2);
+			result_str[len1 + len2 + 1] = sum % 10;
+			sum /= 10;
+		}
+		if (sum > 0)
+			result_str[len1 + len2 + 1] += sum;
+	}
+	_putchar('\n');
+	free(result_str);
 return (0);
 }
