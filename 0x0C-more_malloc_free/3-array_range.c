@@ -8,23 +8,16 @@
  *
  * Return: pointer to the new array
  */
+
 int *array_range(int min, int max)
 {
-	int *ptr;
-	int i, size;
-
-	if (min > max)
-		return (NULL);
-
-	size = max - min + 1;
-
-	ptr = malloc(sizeof(int) * size);
-
-	if (ptr == NULL)
-		return (NULL);
-
-	for (i = 0; min <= max; i++)
-		ptr[i] = min++;
-
-	return (ptr);
+int *ptr, i;
+if (min > max)
+return (NULL);
+ptr = malloc(sizeof(int) * (max - min + 1));
+if (ptr == NULL)
+return (NULL);
+for (i = 0; min < max; i++)
+ptr[i] = min++;
+return (ptr);
 }
