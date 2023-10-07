@@ -32,12 +32,10 @@ result[index++] = product[i] + '0';
 result[index] = '\0';
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-char num1[] = "123456789012345678901234567890";
-char num2[] = "987654321098765432109876543210";
 char result[MAX_DIGITS];
-multiply(num1, num2, result);
+multiply(argv[1], argv[2], result);
 printf("Result: %s\n", result);
 return 0;
 }
