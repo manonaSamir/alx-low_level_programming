@@ -13,7 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-long long num1, num2;
+unsigned long num1, num2;
 int j, i;
 if (argc != 3)
 {
@@ -33,6 +33,6 @@ return (98);
 }
 num1 = atoi(argv[1]);
 num2 = atoi(argv[2]);
-printf("%d\n", num1 *num2);
+printf("%lu\n", num1 *num2);
 return (0);
 }
