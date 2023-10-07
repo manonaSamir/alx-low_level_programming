@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
+#include <stdint.h>
 
 /**
  * main - multiplies two positive numbers
@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-unsigned int num1, num2, result_str;
+unsigned long num1, num2, result_str;
 int j, i;
 if (argc != 3)
 {
@@ -32,9 +32,9 @@ return (98);
 }
 }
 }
-num1 = atoi(argv[1]);
-num2 = atoi(argv[2]);
-result_str = num1 *num2;
-printf("Result: %hu\n", result_str);
+num1 = strtoull(argv[1], NULL, 10);
+num2 = strtoull(argv[2], NULL, 10);
+result_str = num1 * num2;
+printf("Result: %lu\n", result_str);
 return (0);
 }
