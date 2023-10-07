@@ -20,8 +20,11 @@ len1 = strlen(s1);
 }
 if (s2 != NULL)
 {
-if(n < s2)
-len2= n;
+if(n < len1 + strlen(s2))
+len2 = n;
+}
+else
+{
 len2 = strlen(s2);
 }
 s3 = malloc(sizeof(char) * (len1 + len2 + 1));
