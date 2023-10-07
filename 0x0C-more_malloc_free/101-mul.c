@@ -13,7 +13,8 @@
 
 int main(int argc, char *argv[])
 {
-int num1, num2, j, i;
+unsigned int num1, num2;
+int j, i;
 if (argc != 3)
 {
 printf("Error\n");
