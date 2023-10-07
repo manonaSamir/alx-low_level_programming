@@ -1,34 +1,35 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "main.h"
 #include <string.h>
-#include <ctype.h>
 
 /**
- * checkErrors - check Errors
- *@c:number of charcter
- *@v: array of arguments
- *Return: always 0 (Success)
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
+ *
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
-int checkErrors(int c, char *v[])
+int is_digit(char *s)
 {
-int j, i;
-if (c != 3)
-{
-printf("Error\n");
-return (98);
+	int i = 0;
+
+	while (s[i])
+	{
+		if (s[i] < '0' || s[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
 }
-for (i = 1; i < c; i++)
+
+
+/**
+ * errors - handles errors for main
+ */
+void errors(void)
 {
-for (j = 0; v[i][j] != '\0' ; j++)
-{
-if (!isdigit(v[i][j]))
-{
-printf("Error\n");
-return (98);
-}
-}
-}
-return (0);
+	printf("Error\n");
+	exit(98);
 }
 
 /**
@@ -38,40 +39,45 @@ return (0);
  *
  * Return: always 0 (Success)
  */
-
 int main(int argc, char *argv[])
 {
-int i, len, len1, len2, *result_str;
-int digit1, digit2, sum;
-checkErrors(argc, argv);
-len1 = strlen(argv[1]);
-len2 = strlen(argv[2]);
+char *s1, *s2;
+int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
+s1 = argv[1], s2 = argv[2];
+if (argc != 3 || !is_digit(s1) || !is_digit(s2))
+errors();
+len1 = strlen(s1);
+len2 = strlen(s2);
 len = len1 + len2 + 1;
-result_str = malloc(sizeof(int) * len);
-if (!result_str)
+result = malloc(sizeof(int) * len);
+if (!result)
 return (1);
 for (i = 0; i <= len1 + len2; i++)
-result_str[i] = 0;
+result[i] = 0;
 for (len1 = len1 - 1; len1 >= 0; len1--)
 {
-digit1 = argv[1][len1] - '0';
-sum = 0;
-for (len2 = strlen(argv[2]) - 1; len2 >= 0; len2--)
+digit1 = s1[len1] - '0';
+carry = 0;
+for (len2 = strlen(s2) - 1; len2 >= 0; len2--)
 {
-digit2 = argv[2][len2] - '0';
-sum += result_str[len] + (digit1 *digit2);
-result_str[len1 + len2 + 1] = sum % 10;
-sum /= 10;
+digit2 = s2[len2] - '0';
+carry += result[len1 + len2 + 1] + (digit1 * digit2);
+result[len1 + len2 + 1] = carry % 10;
+carry /= 10;
 }
-if (sum > 0)
-result_str[len1 + len2 + 1] += sum;
+if (carry > 0)
+result[len1 + len2 + 1] += carry;
 }
 for (i = 0; i < len - 1; i++)
 {
-if (result_str[i])
-putchar(result_str[i] + '0');
+if (result[i])
+a = 1;
+if (a)
+putchar(result[i] + '0');
 }
+if (!a)
+putchar('0');
 putchar('\n');
-free(result_str);
+free(result);
 return (0);
 }
