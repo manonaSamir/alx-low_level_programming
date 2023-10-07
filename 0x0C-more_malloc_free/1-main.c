@@ -41,7 +41,7 @@ int main(void)
     int *a;
 
     a = array_range(0, 10);
-    simple_print_buffer(a, 9);
+    simple_print_buffer(NULL, 9);
     free(a);
     return (0);
 }
