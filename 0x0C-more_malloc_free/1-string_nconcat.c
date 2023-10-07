@@ -20,7 +20,7 @@ len1 = strlen(s1);
 }
 if (s2 != NULL)
 {
-if(n < len1 + strlen(s2))
+if (n < len1 + strlen(s2))
 len2 = n;
 }
 else
