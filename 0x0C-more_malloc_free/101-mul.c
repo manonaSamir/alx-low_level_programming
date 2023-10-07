@@ -6,7 +6,8 @@
 /**
  * checkErrors - check Errors
  *@c:number of charcter
- *@v array of charcter
+ *@v: array of arguments
+ *Return: always 0 (Success)
  */
 int checkErrors(int c, char *v[])
 {
@@ -58,7 +59,7 @@ sum = 0;
 for (len2 = strlen(argv[2]) - 1; len2 >= 0; len2--)
 {
 digit2 = argv[2][len2] - '0';
-sum += result_str[len] + (digit1 * digit2);
+sum += result_str[len] + (digit1 *digit2);
 result_str[len1 + len2 + 1] = sum % 10;
 sum /= 10;
 }
