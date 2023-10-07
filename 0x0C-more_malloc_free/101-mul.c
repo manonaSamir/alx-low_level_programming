@@ -5,6 +5,8 @@
 
 /**
  * checkErrors - check Errors
+ *@c:number of charcter
+ *@v array of charcter
  */
 int checkErrors(int c, char *v[])
 {
