@@ -1,38 +1,43 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 
-/**
- * main - multiplies two positive numbers
- * @argc: number of arguments
- * @argv: array of arguments
- *
- * Return: always 0 (Success)
- */
+#define MAX_DIGITS 1000
 
-int main(int argc, char *argv[])
+void multiply(char num1[], char num2[], char result[])
 {
-unsigned long num1, num2;
-int j, i;
-if (argc != 3)
+int len1 = strlen(num1), len2 = strlen(num2), i, j, digit1, digit2, carry = 0, temp, index =0;
+int product[MAX_DIGITS] = {0};
+for (i = len1 - 1; i >= 0; i--)
 {
-printf("Error\n");
-return (98);
-}
-for (i = 1; i < argc; i++)
+for (j = len2 - 1; j >= 0; j--)
 {
-for (j = 0; argv[i][j] != '\0' ; j++)
-{
-if (!isdigit(argv[i][j]))
-{
-printf("Error\n");
-return (98);
+digit1 = num1[i] - '0';
+digit2 = num2[j] - '0';
+product[i + j + 1] += digit1 * digit2;
 }
 }
+for (i = len1 + len2 - 1; i >= 0; i--)
+{
+temp = (product[i] + carry);
+product[i] = temp % 10;
+carry = temp / 10;
 }
-num1 = atoi(argv[1]);
-num2 = atoi(argv[2]);
-printf("%lu\n", num1 *num2);
-return (0);
+for (i = 0; i < len1 + len2; i++)
+{
+if (product[i] != 0 || index > 0)
+{
+result[index++] = product[i] + '0';
+}
+}
+result[index] = '\0';
+}
+
+int main()
+{
+char num1[] = "123456789012345678901234567890";
+char num2[] = "987654321098765432109876543210";
+char result[MAX_DIGITS];
+multiply(num1, num2, result);
+printf("Result: %s\n", result);
+return 0;
 }
