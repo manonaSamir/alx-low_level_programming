@@ -2,8 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
 #define MAX_DIGITS 1000
+
+/**
+ * multiply - multiplies two positive numbers
+ * @num1: number of arguments
+ * @num2: array of arguments
+ * @result: array of arguments
+ *
+ * Return: always 0 (Success)
+ */
 
 void multiply(char num1[], char num2[], char result[])
 {
@@ -34,6 +42,15 @@ result[index++] = product[i] + '0';
 }
 result[index] = '\0';
 }
+
+
+/**
+ * main - multiplies two positive numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: always 0 (Success)
+ */
 
 int main(int argc, char *argv[])
 {
