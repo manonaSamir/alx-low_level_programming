@@ -18,5 +18,5 @@ return (NULL);
 ptr = malloc(nmemb * size);
 if (!ptr)
 return (NULL);
-return memset(ptr, 0, nmemb * size);
+return (memset(ptr, 0, nmemb * size));
 }
