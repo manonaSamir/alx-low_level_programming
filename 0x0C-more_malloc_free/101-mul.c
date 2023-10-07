@@ -16,7 +16,7 @@ for (j = len2 - 1; j >= 0; j--)
 {
 digit1 = num1[i] - '0';
 digit2 = num2[j] - '0';
-product[i + j + 1] += digit1 * digit2;
+product[i + j + 1] += digit1 *digit2;
 }
 }
 for (i = len1 + len2 - 1; i >= 0; i--)
