@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <gmp.h>
+
 
 /**
  * main - multiplies two positive numbers
@@ -14,10 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-mpz_t  num1, num2, result;
-mpz_init(num1);
-mpz_init(num2);
-mpz_init(result);
+unsigned int num1, num2, result_str ;
 int j, i;
 if (argc != 3)
 {
@@ -35,11 +32,9 @@ return (98);
 }
 }
 }
-mpz_set_str(argv[1], "123456789012345678901234567890", 10);
-mpz_set_str(argv[2], "987654321098765432109876543210", 10);
-mpz_mul(result, num1, num2);
-char* result_str = mpz_get_str(NULL, 10, result);
-printf("Result: %s\n", result_str);
-free(result_str);
+num1 = atoi(argv[1]);
+num2 = atoi(argv[2]);
+result_str = num1 *num2;
+printf("Result: %hu\n", result_str);
 return (0);
 }
