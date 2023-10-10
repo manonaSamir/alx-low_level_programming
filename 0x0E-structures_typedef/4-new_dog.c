@@ -25,5 +25,6 @@ return (NULL);
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
+free(p);
 return (p);
 }
