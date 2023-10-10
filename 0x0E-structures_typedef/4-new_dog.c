@@ -25,5 +25,6 @@ return (NULL);
 (*p).name = malloc(sizeof(char) * strlen(name) + 1);
 strcpy((*p).name, name);
 strcpy((*p).owner, owner);
+(*p).age = age;
 return (p);
 }
