@@ -23,8 +23,8 @@ return (NULL);
 }
 (*p).owner = malloc(sizeof(char) * strlen(owner) + 1);
 (*p).name = malloc(sizeof(char) * strlen(name) + 1);
-strcpy((*p).name, name);
-strcpy((*p).owner, owner);
+strcpy((*p).name, name, strlen(name) + 1);
+strcpy((*p).owner, owner, strlen(owner) + 1);
 (*p).age = age;
 return (p);
 }
