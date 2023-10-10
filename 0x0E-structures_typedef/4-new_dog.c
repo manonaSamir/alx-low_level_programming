@@ -17,7 +17,7 @@ dog_t *p;
 p = malloc(sizeof(dog_t));
 if (!p)
 return (NULL);
-if (!name || !owner || age == 0)
+if (!name || !owner)
 {
 return (NULL);
 }
@@ -26,4 +26,3 @@ return (NULL);
 (*p).owner = owner;
 return (p);
 }
-
