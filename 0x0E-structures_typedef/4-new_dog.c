@@ -22,10 +22,8 @@ return (NULL);
 }
 (*p).owner = malloc(sizeof(char) * strlen(owner) + 1);
 (*p).name = malloc(sizeof(char) * strlen(name) + 1);
-if (!(*p).name || !(*p).owner || age == 0)
+if (!(*p).name || !(*p).owner)
 {
-free(name);
-free(owner);
 free(p);
 return (NULL);
 }
