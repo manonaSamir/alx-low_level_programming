@@ -20,9 +20,9 @@ return (NULL);
 (*p).name = malloc(sizeof(char) * strlen(name) + 1);
 if (!name || !owner || age == 0)
 {
-free(p);
 free(name);
 free(owner);
+free(p);
 return (NULL);
 }
 strcpy((*p).name, name);
