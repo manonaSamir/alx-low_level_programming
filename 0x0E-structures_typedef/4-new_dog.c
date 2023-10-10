@@ -16,15 +16,17 @@ dog_t *p;
 p = malloc(sizeof(dog_t));
 if (!p)
 return (NULL);
+(*p).owner = malloc(sizeof(char) * strlen(owner) + 1);
+(*p).name = malloc(sizeof(char) * strlen(name) + 1);
 if (!name || !owner || age == 0)
 {
 free(p);
+free(name);
+free(owner);
 return (NULL);
 }
-(*p).owner = malloc(sizeof(char) * strlen(owner) + 1);
-(*p).name = malloc(sizeof(char) * strlen(name) + 1);
-strncpy((*p).name, name, strlen(name) + 1);
-strncpy((*p).owner, owner, strlen(owner) + 1);
+strcpy((*p).name, name);
+strcpy((*p).owner, owner);
 (*p).age = age;
 return (p);
 }
