@@ -18,7 +18,8 @@ if (p == NULL)
 return (NULL);
 if (name == NULL)
 {
-free(p, owner);
+free(p);
+free(owner);
 return (NULL);
 }
 if (owner == NULL)
