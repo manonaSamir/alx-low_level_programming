@@ -19,7 +19,6 @@ if (!p)
 return (NULL);
 if (!name || !owner || age == 0)
 {
-
 return (NULL);
 }
 (*p).name = name;
