@@ -19,13 +19,8 @@ p = malloc(sizeof(dog_t));
 if (!p)
 return (NULL);
 (*p).name = malloc(sizeof(char) * strlen(name) + 1);
-if (!(*p).name)
-{
-free(p);
-return (NULL);
-}
 (*p).owner = malloc(sizeof(char) * strlen(owner) + 1);
-if (!(*p).owner)
+if (!(*p).owner || !(*p).name)
 {
 free((*p).name);
 free(p);
