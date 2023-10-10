@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 
+
 /**
  * new_dog - create new dog from the dna of the first dog.
  * @name: name of dog
@@ -26,6 +27,5 @@ return (NULL);
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
-free(p);
 return (p);
 }
