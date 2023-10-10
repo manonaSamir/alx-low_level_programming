@@ -19,8 +19,6 @@ if (!p)
 return (NULL);
 if (!name || !owner || age == 0)
 {
-free(name);
-free(owner);
 return (NULL);
 }
 (*p).name = name;
