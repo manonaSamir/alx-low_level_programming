@@ -28,6 +28,10 @@ free(p);
 free(name);
 return (NULL);
 }
+if (age == 0)
+{
+return (NULL);
+}
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
