@@ -16,10 +16,8 @@ dog_t *p;
 p = malloc(sizeof(dog_t));
 if (!p)
 return (NULL);
-if (!name || !owner || age == 0)
-{
+if (!name || !owner || age <= 0)
 return (NULL);
-}
 (*p).owner = malloc(sizeof(char) * strlen(owner) + 1);
 (*p).name = malloc(sizeof(char) * strlen(name) + 1);
 if (!(*p).name || !(*p).owner)
