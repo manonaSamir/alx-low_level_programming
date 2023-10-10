@@ -26,8 +26,8 @@ free((*p).name);
 free(p);
 return (NULL);
 }
-strcpy((*p).name, name);
-strcpy((*p).owner, owner);
+(*p).name = name;
+(*p).owner = owner;
 (*p).age = age;
 return (p);
 }
