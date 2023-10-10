@@ -1,14 +1,11 @@
 #include "dog.h"
 #include <stdlib.h>
-
-
 /**
- * new_dog - create new dog from the dna of the first dog.
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
- *
- * Return: pointer to dog
+ * new_dog - entry point
+ * @name: string from main, name of pet
+ * @age: number from main, age of pet
+ * @owner: string from main, owner of pet
+ * Return: p
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -27,6 +24,5 @@ return (NULL);
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
-free();
 return (p);
 }
