@@ -21,11 +21,10 @@ if (!name || !owner || age == 0)
 free(p);
 return (NULL);
 }
-(*p).owner = malloc(strlen(owner));
-(*p).name = malloc(strlen(name));
+(*p).owner = malloc(strlen(owner) + 1);
+(*p).name = malloc(strlen(name) + 1);
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
-free(p);
 return (p);
 }
