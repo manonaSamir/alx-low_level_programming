@@ -29,4 +29,5 @@ return (NULL);
 return (p);
 free(name);
 free(owner);
+free(p);
 }
