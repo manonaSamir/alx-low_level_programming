@@ -26,6 +26,6 @@ return (NULL);
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
-free(sizeof(dog_t));
+free(p);
 return (p);
 }
