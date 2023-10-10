@@ -19,6 +19,7 @@ if (!p)
 return (NULL);
 if (!name || !owner || age == 0)
 {
+free(p);
 return (NULL);
 }
 (*p).name = name;
