@@ -21,6 +21,7 @@ if (!name || !owner || age == 0)
 {
 free(name);
 free(owner);
+free(p);
 return (NULL);
 }
 (*p).name = name;
@@ -28,4 +29,6 @@ return (NULL);
 (*p).owner = owner;
 return (p);
 free(p);
+free(name);
+free(owner);
 }
