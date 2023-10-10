@@ -17,10 +17,16 @@ dog_t *p;
 p = malloc(sizeof(dog_t));
 if (!p)
 return (NULL);
-if (!name || !owner || age == 0)
+if (name == NULL)
 {
-free(name);
+free(p);
 free(owner);
+return (NULL);
+}
+if (owner == NULL)
+{
+free(p);
+free(name);
 return (NULL);
 }
 (*p).name = name;
