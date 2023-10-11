@@ -19,6 +19,6 @@ while (size--)
 if (cmp(array[i - size]) != 0)
 return (i - size);
 }
-return (-1);
 }
+return (-1);
 }
