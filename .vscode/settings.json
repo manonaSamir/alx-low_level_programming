@@ -4,6 +4,7 @@
         "main.h": "c",
         "stdio.h": "c",
         "string.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "dog.h": "c"
     }
 }
