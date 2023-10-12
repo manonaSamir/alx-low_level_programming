@@ -19,6 +19,6 @@ printf("%d", va_arg(numbers, int));
 if (separator && i < n - 1)
 printf("%s", separator);
 }
-printf('\n');
+printf("\n");
 va_end(numbers);
 }
