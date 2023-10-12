@@ -10,34 +10,14 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-unsigned int i, size = 2;
-char print [200];
+unsigned int i;
 va_list numbers;
 va_start(numbers, n);
-if (separator)
-size =  4;
-for (i = 0; i < n * size; i += size)
+for (i = 0; i < n ; i++)
 {
-print[i] = '%';
-print[i + 1] = 'd';
-if (i != (n * size) -size)
-{
-if (separator)
-{
-print[i + 2] = *separator;
-print[i + 3] = ' ';
+printf("%d", va_arg(numbers, int));
+if (separator && i < n - 1)
+printf("%s", separator);
 }
-}
-}
-if (separator)
-{
-print[i - 2] = '\0';
-}
-else
-{
-print[i] = '\0';
-}
-print[i + 1] = "\n";
-vprintf(print, numbers);
 va_end(numbers);
 }
