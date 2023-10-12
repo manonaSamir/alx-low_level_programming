@@ -29,7 +29,14 @@ print[i + 3] = ' ';
 }
 }
 }
+if (separator)
+{
 print[i - 2] = '\0';
+}
+else
+{
+print[i] = '\0';
+}
 print[i + 1] = '\n';
 vprintf(print, numbers);
 va_end(numbers);
