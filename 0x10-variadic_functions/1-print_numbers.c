@@ -20,7 +20,7 @@ for (i = 0; i < n * size; i += size)
 {
 print[i] = '%';
 print[i + 1] = 'd';
-if (i < (n * size - 1))
+if (i != (n * size) - size)
 {
 if (separator)
 {
@@ -29,8 +29,7 @@ print[i + 3] = ' ';
 }
 }
 }
-
-print[i] = '\0';
+print[i - 2] = '\0';
 print[i + 1] = '\n';
 vprintf(print, numbers);
 va_end(numbers);
