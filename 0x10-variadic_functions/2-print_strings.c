@@ -15,7 +15,7 @@ va_list numbers;
 va_start(numbers, n);
 for (i = 0; i < n ; i++)
 {
-if(!numbers[i])
+if (!numbers[i])
 printf("%s", "nil");
 else
 printf("%s", va_arg(numbers, char*));
