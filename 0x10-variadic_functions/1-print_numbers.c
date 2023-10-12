@@ -37,7 +37,7 @@ else
 {
 print[i] = '\0';
 }
-print[i + 1] = '\n';
+print[i + 1] = "\n";
 vprintf(print, numbers);
 va_end(numbers);
 }
