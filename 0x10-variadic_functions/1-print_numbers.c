@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_strings - prints strings
+ * print_numbers - prints strings
  * @separator: separator between strings
  * @n: number of arguments
  */
@@ -20,7 +20,7 @@ for (i = 0; i < n * size; i += size)
 {
 print[i] = '%';
 print[i + 1] = 'd';
-if (i != (n * size) - size)
+if (i != (n * size) -size)
 {
 if (separator)
 {
