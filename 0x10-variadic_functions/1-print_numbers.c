@@ -20,12 +20,16 @@ for (i = 0; i < n * size; i += size)
 {
 print[i] = '%';
 print[i + 1] = 'd';
-if (separator || i == (n * size) - 1)
+if (i < (n * size - 1))
+{
+if (separator)
 {
 print[i + 2] = *separator;
 print[i + 3] = ' ';
 }
 }
+}
+
 print[i] = '\0';
 print[i + 1] = '\n';
 vprintf(print, numbers);
