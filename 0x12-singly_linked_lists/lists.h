@@ -1,6 +1,8 @@
 #ifndef VAR_FUNC_H
 #define VAR_FUNC_H
 #include <stdlib.h>
+#include<stdio.h>
+#include<string.h>
 
 /**
  * struct list_s - singly linked list
