@@ -20,7 +20,7 @@ list_t *next_node(const char *str)
 	while (str[len])
 		len++;
 
-	new->s = strdup(str);
+	new->str = strdup(str);
 	new->len = len;
 	new->next = NULL;
 	return (new);
@@ -38,13 +38,13 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (!(*head))
 	{
-		*head = new_node(str);
+		*head = next_node(str);
 		return (*head);
 	}
 
 	if (!(*head)->next)
 	{
-		new = new_node(str);
+		new = next_node(str);
 		new->next = (*head)->next;
 		(*head)->next = new;
 	}
