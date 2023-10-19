@@ -2,6 +2,14 @@
 #define VAR_FUNC_H
 #include <stdlib.h>
 
+/**
+ * struct list_s - singly linked list
+ * @s: string
+ * @len: length of the string
+ * @next: pointer to the next node
+ * Description: singly linked list node structure
+ */
+
 typedef struct list_s
 {
 	char *s;

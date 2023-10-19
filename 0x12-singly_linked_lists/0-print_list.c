@@ -15,8 +15,7 @@ size_t print_list(const list_t *h)
 	if (!h)
 		return (0);
 	add_nodes = 0;
-	do
-	{
+	do {
 		if (!h->s)
 			printf("[0] (nil)\n");
 		else
