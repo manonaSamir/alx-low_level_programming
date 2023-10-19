@@ -6,6 +6,7 @@
         "string.h": "c",
         "stdlib.h": "c",
         "dog.h": "c",
-        "3-calc.h": "c"
+        "3-calc.h": "c",
+        "stdarg.h": "c"
     }
 }
