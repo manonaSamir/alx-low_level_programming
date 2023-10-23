@@ -4,7 +4,8 @@
 
 /**
  * add_nodeint - adds a new node at the beginning of a list.
- * @h: pointer to list.
+ * @head: pointer to list.
+ * @n: data
  * Return: number of elements in a list
  */
 
