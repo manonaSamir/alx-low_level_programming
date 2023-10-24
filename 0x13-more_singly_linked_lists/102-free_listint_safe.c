@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * print_listint_safe - prints a listint_t linked list.
- * @head: pointer to list.
+ * free_listint_safe - prints a listint_t linked list.
+ * @h: pointer to list.
  * Return: pointer to the first node of the reversed list
  */
 
