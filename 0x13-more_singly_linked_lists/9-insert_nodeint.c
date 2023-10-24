@@ -26,15 +26,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		(*head) = ptr2;
 		return (ptr2);
 	}
-	idx--;
-	while (idx != 1 && ptr2)
+	while (idx != 1)
 	{
+		if (!ptr) // If ptr is NULL, we've reached the end of the list before reaching the desired index
+		{
+			free(ptr2); // Clean up the newly allocated node
+			return (NULL);
+		}
 		ptr = ptr->next;
 		idx--;
 	}
+
 	ptr2->next = ptr->next;
 	ptr->next = ptr2;
-	if (ptr2)
-		return (ptr2);
-	return (NULL);
+	return (ptr2);
 }
