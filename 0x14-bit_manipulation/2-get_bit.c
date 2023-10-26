@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a number.
+ * get_bit - prints the binary representation of a number.
  * @n: number to be converted
- *@index:
+ * @index: Starting from 0 of the bit you want to get
  * Return: converted decimal number or 0
  */
 
