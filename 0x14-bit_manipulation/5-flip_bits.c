@@ -11,10 +11,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int target, num_bit = 0;
 
 	target = n ^ m;
-	while (target)
+	for (;target;target >>= 1)
 	{
 		num_bit += target & 1;
-		target >>= 1;
 	}
 	return (num_bit);
 }
