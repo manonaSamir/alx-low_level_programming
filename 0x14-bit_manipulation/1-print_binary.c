@@ -8,12 +8,22 @@
 
 void print_binary(unsigned long int n)
 {
-	int b_num = 0, i;
+	int i, j;
+	char binary[64];
 
-	for (i = 1; n != 0; i *= 10)
+	if (n == 0)
 	{
-		n /= 2;
-		b_num += (n % 2) * i;
+		putchar('0');
+		return;
 	}
-	printf("%d", b_num);
+	for (i = 1; n != 0; i++)
+	{
+		binary[i] = (n % 2) + '0';
+		n /= 2;
+	}
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(binary[j]);
+	}
 }
