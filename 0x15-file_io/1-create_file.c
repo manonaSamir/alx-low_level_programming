@@ -27,14 +27,10 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-
 	if (text_content != NULL)
-	{
-		for (length = 0; text_content[length];)
-			length++;
-	}
+		length = _strlen(text_content);
 
-	fptr = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	fptr =  open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	count = write(fptr, text_content, length);
 	if (fptr == -1 || count == -1)
 		return (-1);
