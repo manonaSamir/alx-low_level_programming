@@ -7,6 +7,8 @@
  * function should read and print.
  * Return: If the function fails or filename is NULL - 0.
  */
+#include "main.h"
+#include <stdlib.h>
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -24,10 +26,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	ch = malloc(letters + 1);
+	ch = malloc(sizeof(char) * letters);
 	if (ch == NULL)
 	{
-		close(fptr);
 		return (0);
 	}
 
@@ -35,9 +36,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (count != -1)
 	{
 		count = write(STDOUT_FILENO, ch, count);
+		printf("\n");
 	}
 
 	free(ch);
 	close(fptr);
-	return (count);
+	return (count + 1);
 }
