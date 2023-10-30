@@ -1,11 +1,4 @@
-
-#include <100-elf_header.c>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "elf.h"
 
 /**
  * close_elf - Closes an ELF file.
