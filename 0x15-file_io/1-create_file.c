@@ -23,15 +23,16 @@ int _strlen(char *s)
 
 int create_file(const char *filename, char *text_content)
 {
-	int count, length = _strlen(text_content);
+	int fptr, length = _strlen(text_content);
+	size_t count;
 
 	if (filename == NULL)
 		return (-1);
-	count = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
-	if (count == -1)
+	fptr = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (fptr == -1)
 		return (-1);
 	if (length)
-		count = write(count, text_content, length);
+		count = write(fptr, text_content, length);
 	close(count);
 	return (1);
 }
