@@ -10,30 +10,34 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t count;
+	int fptr;
+	char *ch;
 
-	size_t i = 0;
-	ssize_t count = 1;
-	FILE *fptr;
-	char ch;
-
-	fptr = fopen(filename, "r");
-
-	if (fptr == NULL)
+	if (filename == NULL)
+	{
+		return (0);
+	}
+	fptr = open(filename, O_RDONLY);
+	if (fptr == -1)
 	{
 		return (0);
 	}
 
-	for (; i <= letters; i++)
+	ch = malloc(letters + 1);
+	if (ch == NULL)
 	{
-		ch = fgetc(fptr);
-		if (feof(fptr))
-		{
-			break;
-		}
-		_putchar(ch);
-		count++;
+		close(fptr);
+		return (0);
 	}
 
-	fclose(fptr);
+	count = read(fptr, ch, letters);
+	if (count != -1)
+	{
+		count = write(STDOUT_FILENO, ch, count);
+	}
+
+	free(ch);
+	close(fptr);
 	return (count);
 }
