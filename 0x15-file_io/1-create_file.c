@@ -29,10 +29,10 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 	count = open(filename, O_CREAT | O_RDWR | O_TRUNC);
-	if (length > 0)
-		count = write(count, text_content, length);
 	if (count == -1)
 		return (-1);
+	if (length)
+		count = write(count, text_content, length);
 	close(count);
 	return (1);
 }
