@@ -8,37 +8,30 @@
  * function should read and print.
  * Return: If the function fails or filename is NULL - 0.
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t count;
-	int fptr;
-	char *ch;
+	ssize_t o, r, w;
+	char *buffer;
 
 	if (filename == NULL)
-	{
 		return (0);
-	}
-	fptr = open(filename, O_RDONLY);
-	if (fptr == -1)
+
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
+
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
+
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
+		free(buffer);
 		return (0);
 	}
 
-	ch = malloc(sizeof(char) * letters);
-	if (ch == NULL)
-	{
-		return (0);
-	}
+	free(buffer);
+	close(o);
 
-	count = read(fptr, ch, letters);
-	if (count != -1)
-	{
-		count = write(STDOUT_FILENO, ch, count);
-		printf("\n");
-	}
-
-	free(ch);
-	close(fptr);
-	return (count);
+	return (w);
 }
