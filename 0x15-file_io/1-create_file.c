@@ -36,7 +36,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	count = write(fptr, text_content, length);
-	if (!count)
+	if (count == -1)
 		return (-1);
 	close(fptr);
 	return (1);
