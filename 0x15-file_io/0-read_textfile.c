@@ -12,17 +12,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 
 	size_t i = 0;
-	ssize_t count = 0;
+	ssize_t count = 1;
 	FILE *fptr;
 	char ch;
 
 	fptr = fopen(filename, "r");
+
 	if (fptr == NULL)
 	{
 		return (0);
 	}
 
-	for (; i < letters; i++)
+	for (; i <= letters; i++)
 	{
 		ch = fgetc(fptr);
 		if (feof(fptr))
