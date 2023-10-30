@@ -26,8 +26,9 @@ int create_file(const char *filename, char *text_content)
 	int fptr;
 	size_t count, length = _strlen(text_content);
 
-
-	fptr = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (filename == NULL)
+		return (-1);
+	fptr = open(filename,  O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fptr == -1)
 		return (-1);
 	if (!length)
