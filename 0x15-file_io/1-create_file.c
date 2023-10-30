@@ -1,5 +1,24 @@
 #include "main.h"
 
+
+
+/**
+ * _strlen - function that returns the length of a string.
+ * @s: string to measure.
+ *
+ * Return: Length of the string as INT.
+ */
+
+int _strlen(char *s)
+{
+if (*s)
+return (1 + _strlen((s + 1)));
+return (0);
+}
+
+
+
+
 /**
  * create_file - Creates a file.
  * @filename: A pointer to the name of the file to create.
