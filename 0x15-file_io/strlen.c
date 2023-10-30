@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strlen_recursion - function that returns the length of a string.
+ * _strlen - function that returns the length of a string.
  * @s: string to measure.
  *
  * Return: Length of the string as INT.
