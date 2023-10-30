@@ -28,7 +28,7 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 	if (text_content != NULL)
-		length = _strlen(text_content);
+		length = _strlen(text_content) + 1;
 
 	fptr = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	count = write(fptr, text_content, length);
