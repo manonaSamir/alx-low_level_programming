@@ -31,10 +31,10 @@ int create_file(const char *filename, char *text_content)
 	fptr = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fptr == -1)
 		return (-1);
-	if (length)
-		count = write(fptr, text_content, length);
-	if (fptr == -1)
+
+	count = write(fptr, text_content, length);
+	if (!count)
 		return (-1);
-	close(count);
+	close(fptr);
 	return (1);
 }
