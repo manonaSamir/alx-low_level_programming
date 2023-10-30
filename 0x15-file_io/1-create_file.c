@@ -1,7 +1,5 @@
 #include "main.h"
 
-
-
 /**
  * _strlen - function that returns the length of a string.
  * @s: string to measure.
@@ -11,13 +9,10 @@
 
 int _strlen(char *s)
 {
-if (*s)
-return (1 + _strlen((s + 1)));
-return (0);
+	if (*s)
+		return (1 + _strlen((s + 1)));
+	return (0);
 }
-
-
-
 
 /**
  * create_file - Creates a file.
@@ -34,7 +29,8 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 	count = open(filename, O_CREAT | O_RDWR | O_TRUNC);
-	count = write(count, text_content, length);
+	if (length > 0)
+		count = write(count, text_content, length);
 	if (count == -1)
 		return (-1);
 	close(count);
