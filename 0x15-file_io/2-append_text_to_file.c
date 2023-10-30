@@ -33,6 +33,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	count = write(fptr, text_content, length);
 	if (fptr == -1 || count == -1)
 		return (-1);
-	close(o);
+	close(fptr);
 	return (1);
 }
