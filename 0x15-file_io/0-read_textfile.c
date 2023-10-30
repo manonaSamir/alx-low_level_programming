@@ -32,11 +32,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	count = read(fptr, ch, letters);
-	if (count != -1)
-	{
-		count = write(STDOUT_FILENO, ch, count);
+
+count = write(STDOUT_FILENO, ch, count);
 	
-	}
+	
 
 	free(ch);
 	close(fptr);
