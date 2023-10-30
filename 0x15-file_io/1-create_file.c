@@ -6,14 +6,12 @@
  * @text_content: A pointer to a string to write to the file.
  * Return: If fails -(-1)
  */
+
 int create_file(const char *filename, char *text_content)
 {
 	int count, length;
 
-	if (text_content != NULL)
-	{
-		length = _strlen(text_content);
-	}
+	length = _strlen(text_content);
 	if (filename == NULL)
 		return (-1);
 	count = open(filename, O_CREAT | O_RDWR | O_TRUNC);
