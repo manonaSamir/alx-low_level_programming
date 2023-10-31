@@ -16,7 +16,6 @@ void display_error(const char *message)
 	exit(98);
 }
 
-
 /**
  * display_elf_header - Checks if a file is an ELF file.
  * @filename: A pointer to an array containing the ELF magic numbers.
@@ -25,13 +24,12 @@ void display_error(const char *message)
 void display_elf_header(const char *filename)
 {
 	int fd = open(filename, O_RDONLY);
+	Elf64_Ehdr elf_header;
 
 	if (fd == -1)
 	{
 		display_error("Failed to open the file");
 	}
-
-	Elf64_Ehdr elf_header;
 
 	if (read(fd, &elf_header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr))
 	{
