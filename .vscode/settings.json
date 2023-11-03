@@ -1,12 +1,15 @@
 {
     "files.eol": "\n",
     "files.associations": {
-        "main.h": "c",
-        "stdio.h": "c",
-        "string.h": "c",
-        "stdlib.h": "c",
-        "dog.h": "c",
-        "3-calc.h": "c",
-        "stdarg.h": "c"
-    }
+		"main.h": "c",
+		"stdio.h": "c",
+		"string.h": "c",
+		"stdlib.h": "c",
+		"dog.h": "c",
+		"3-calc.h": "c",
+		"stdarg.h": "c",
+		"fcntl.h": "c",
+		"stat.h": "c",
+		"types.h": "c"
+	}
 }
