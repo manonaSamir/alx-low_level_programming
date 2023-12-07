@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - all the elements of a list_t list.
+ * add_dnodeint_end - all the elements of a list_t list.
  * @head: pointer to list.
  * @n: needs to be duplicated
  * Return: the address of the new element, or NULL if it failed
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new, *tube;
 
