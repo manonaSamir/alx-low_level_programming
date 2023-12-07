@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_dnodeint_at_index - insert node at index
  * @h: pointer of  list
@@ -9,43 +8,44 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *ptr = *h, *slow = *h, *fast = slow->next, *new_node;
-	unsigned int siz = 0;
+	dlistint_t *tmp = *h, *new;
+	unsigned int index = 1;
 
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
 		return (NULL);
-
-	/* to get the size of the list */
-	while (ptr)
+	new->n = n;
+	new->prev = NULL;
+	new->next = NULL;
+	if ((*h) == NULL)
 	{
-		ptr = ptr->next;
-		siz++;
+		if (idx == 0)
+		{
+			*h = new;
+			return (new);
+		}
+		return (NULL);
 	}
-
-	/* insert at the beginning */
 	if (idx == 0)
-		return (add_dnodeint(h, n));
-
-	/* insert at the end */
-	else if (idx == siz)
-		return (add_dnodeint_end(h, n));
-
-	/* check if idx is out of range */
-	if (idx > siz)
-		return (NULL);
-
-	while ((idx--) - 1)
 	{
-		slow = slow->next;
-		fast = slow->next;
+		new->next = *h;
+		(*h)->prev = new;
+		*h = new;
+		return (new);
 	}
-
-	new_node->n = n;
-	new_node->next = fast;
-	new_node->prev = slow;
-	fast->prev = new_node;
-	slow->next = new_node;
-
-	return (new_node);
+	while (tmp->next != NULL && index != idx)
+	{
+		tmp = tmp->next;
+		index++;
+	}
+	if (index == idx)
+	{
+		new->prev = tmp;
+		new->next = tmp->next;
+		if (tmp->next != NULL)
+			tmp->next->prev = new;
+		tmp->next = new;
+		return (new);
+	}
+	return (NULL);
 }
