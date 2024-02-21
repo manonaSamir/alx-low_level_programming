@@ -17,4 +17,4 @@ oclean:
 fclean: clean oclean
 
 # Rebuild rule - forces a clean rebuild
-re: oclean all
+re: fclean all
